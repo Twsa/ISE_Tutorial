@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3a -refsym time_cnt C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/time_cnt.sch C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/time_cnt.sym 

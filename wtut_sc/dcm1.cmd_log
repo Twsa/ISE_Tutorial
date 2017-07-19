@@ -1,0 +1,2 @@
+xaw2spl {-intstyle ise} C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/ipcore_dir/dcm1.xaw 
+spl2sym -intstyle ise -family spartan3a dcm1.spl C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/dcm1.sym 

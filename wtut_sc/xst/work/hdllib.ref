@@ -1,0 +1,12 @@
+AR lcd_control lcd_control_arch C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd sub00/vhpl01 1500275753
+EN clk_div_262k NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd sub00/vhpl02 1500275754
+AR clk_div_262k behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd sub00/vhpl03 1500275755
+AR debounce behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/debounce.vhd sub00/vhpl11 1500346721
+AR stopwatch behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf sub00/vhpl07 1500275759
+AR statmach behavior C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/statmach.vhd sub00/vhpl09 1500347921
+EN debounce NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/debounce.vhd sub00/vhpl10 1500346720
+EN lcd_control NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd sub00/vhpl00 1500275752
+EN cb8ce_hxilinx_stopwatch NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf sub00/vhpl04 1500275756
+EN statmach NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/statmach.vhd sub00/vhpl08 1500347920
+EN stopwatch NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf sub00/vhpl06 1500275758
+AR cb8ce_hxilinx_stopwatch behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf sub00/vhpl05 1500275757

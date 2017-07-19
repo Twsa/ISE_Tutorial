@@ -1,0 +1,657 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.23 secs
+ 
+--> Reading design: stopwatch.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "stopwatch.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "stopwatch"
+Output Format                      : NGC
+Target Device                      : xc3s700a-4-fg484
+
+---- Source Options
+Top Module Name                    : stopwatch
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd" in Library work.
+Architecture lcd_control_arch of Entity lcd_control is up to date.
+Compiling vhdl file "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd" in Library work.
+Architecture behavioral of Entity clk_div_262k is up to date.
+Compiling vhdl file "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf" in Library work.
+Architecture behavioral of Entity cb8ce_hxilinx_stopwatch is up to date.
+Architecture behavioral of Entity stopwatch is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <stopwatch> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <lcd_control> in library <work> (architecture <lcd_control_arch>).
+
+Analyzing hierarchy for entity <CB8CE_HXILINX_stopwatch> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clk_div_262k> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <stopwatch> in library <work> (Architecture <behavioral>).
+    Set user-defined property "LOC =  AB4" for signal <lcd_e> in unit <stopwatch>.
+    Set user-defined property "LOC =  Y14" for signal <lcd_rs> in unit <stopwatch>.
+    Set user-defined property "LOC =  W13" for signal <lcd_rw> in unit <stopwatch>.
+    Set user-defined property "LOC =  Y15 AB16 Y12 AA12 AB12 AB17 AB18 Y13" for signal <sf_d> in unit <stopwatch>.
+WARNING:Xst:753 - "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf" line 143: Unconnected output port 'CEO' of component 'CB8CE_HXILINX_stopwatch'.
+WARNING:Xst:753 - "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf" line 143: Unconnected output port 'TC' of component 'CB8CE_HXILINX_stopwatch'.
+    Set user-defined property "HU_SET =  timer_load_address_0" for instance <timer_load_address> in unit <stopwatch>.
+Entity <stopwatch> analyzed. Unit <stopwatch> generated.
+
+Analyzing Entity <lcd_control> in library <work> (Architecture <lcd_control_arch>).
+WARNING:Xst:819 - "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <timer_flag>, <clock_flag>, <mode>
+Entity <lcd_control> analyzed. Unit <lcd_control> generated.
+
+Analyzing Entity <CB8CE_HXILINX_stopwatch> in library <work> (Architecture <behavioral>).
+Entity <CB8CE_HXILINX_stopwatch> analyzed. Unit <CB8CE_HXILINX_stopwatch> generated.
+
+Analyzing Entity <clk_div_262k> in library <work> (Architecture <behavioral>).
+Entity <clk_div_262k> analyzed. Unit <clk_div_262k> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lcd_control>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd".
+INFO:Xst:1799 - State donestate is never reached in FSM <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 47                                             |
+    | Transitions        | 99                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 48                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | waiting                                        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <sf_d>.
+    Found 1-bit register for signal <clock_flag>.
+    Found 32-bit comparator greater for signal <control$cmp_gt0000> created at line 124.
+    Found 32-bit comparator lessequal for signal <control$cmp_le0000> created at line 124.
+    Found 32-bit comparator lessequal for signal <control$cmp_le0001> created at line 63.
+    Found 32-bit register for signal <count>.
+    Found 32-bit up counter for signal <count_temp>.
+    Found 1-bit register for signal <lap_flag>.
+    Found 4-bit register for signal <lap_hundredths>.
+    Found 4-bit register for signal <lap_min>.
+    Found 4-bit register for signal <lap_ones>.
+    Found 4-bit register for signal <lap_tens>.
+    Found 4-bit register for signal <lap_tenths>.
+    Found 1-bit register for signal <mode_state>.
+    Found 1-bit register for signal <next_mode_state>.
+    Found 32-bit comparator greatequal for signal <state$cmp_ge0000> created at line 56.
+    Found 1-bit register for signal <timer_flag>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <lcd_control> synthesized.
+
+
+Synthesizing Unit <CB8CE_HXILINX_stopwatch>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf".
+    Found 8-bit up counter for signal <COUNT>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <CB8CE_HXILINX_stopwatch> synthesized.
+
+
+Synthesizing Unit <clk_div_262k>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd".
+    Found 1-bit register for signal <div_262144>.
+    Found 32-bit up counter for signal <cnt>.
+    Found 32-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 36.
+    Found 1-bit register for signal <div_temp>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <clk_div_262k> synthesized.
+
+
+Synthesizing Unit <stopwatch>.
+    Related source file is "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/stopwatch.vhf".
+WARNING:Xst:653 - Signal <rst_int> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <mode_control> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <load> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <lcd_cntrl_inst_mode_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <lcd_cntrl_inst_lap_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <count5> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <count4> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <count3> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <count2> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <count1> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:653 - Signal <clk_26214k> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <address> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <stopwatch> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 14
+ 1-bit register                                        : 7
+ 32-bit register                                       : 1
+ 4-bit register                                        : 5
+ 8-bit register                                        : 1
+# Comparators                                          : 5
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <lcd_cntrl_inst/state/FSM> on signal <state[1:47]> with one-hot encoding.
+-------------------------------------------------------------------
+ State          | Encoding
+-------------------------------------------------------------------
+ waiting        | 00000000000000000000000000000000000000000000001
+ init1          | 00000000000000000000000000000000000000000000010
+ init2          | 00000000000000000000000000000000000000000000100
+ init3          | 00000000000000000000000000000000000000000001000
+ init4          | 00000000000000000000000000000000000000000010000
+ init5          | 00000000000000000000000000000000000000000100000
+ init6          | 00000000000000000000000000000000000000001000000
+ init7          | 00000000000000000000000000000000000000010000000
+ word1          | 00000000000000000000000000000000000000100000000
+ word2          | 00000000000000000000000000000000000001000000000
+ word3          | 00000000000000000000000000000000000010000000000
+ word4          | 00000000000000000000000000000000000100000000000
+ word5          | 00000000000000000000000000000000001000000000000
+ alt_word5      | 00000000000000000000000000000000010000000000000
+ word6          | 00000000000000000000000000000001000000000000000
+ word7          | 00000000000000000000000000000010000000000000000
+ word8          | 00000000000000000000000000000100000000000000000
+ word9          | 00000000000000000000000000001000000000000000000
+ word10         | 00000000000000000000000000010000000000000000000
+ time_display1  | 00000000000000000000000000000000100000000000000
+ time_display2  | 00000000000000000000000000100000000000000000000
+ time_display3  | 00000000000000000000000001000000000000000000000
+ time_display4  | 00000000000000000000000010000000000000000000000
+ time_display5  | 00000000000000000000000100000000000000000000000
+ time_display6  | 00000000000000000000001000000000000000000000000
+ time_display7  | 00000000000000000000010000000000000000000000000
+ time_display8  | 00000000000000000000100000000000000000000000000
+ time_display9  | 00000000000000000001000000000000000000000000000
+ time_display10 | 00000000000000000010000000000000000000000000000
+ time_display11 | 00000000000000000100000000000000000000000000000
+ time_display12 | 00000000000000001000000000000000000000000000000
+ time_display13 | 00000000000000010000000000000000000000000000000
+ time_display14 | 00000000000000100000000000000000000000000000000
+ lap_display1   | 00000000000001000000000000000000000000000000000
+ lap_display2   | 00000000000010000000000000000000000000000000000
+ lap_display3   | 00000000000100000000000000000000000000000000000
+ lap_display4   | 00000000001000000000000000000000000000000000000
+ lap_display5   | 00000000010000000000000000000000000000000000000
+ lap_display6   | 00000000100000000000000000000000000000000000000
+ lap_display7   | 00000001000000000000000000000000000000000000000
+ lap_display8   | 00000010000000000000000000000000000000000000000
+ lap_display9   | 00000100000000000000000000000000000000000000000
+ lap_display10  | 00001000000000000000000000000000000000000000000
+ lap_display11  | 00010000000000000000000000000000000000000000000
+ lap_display12  | 00100000000000000000000000000000000000000000000
+ lap_display13  | 01000000000000000000000000000000000000000000000
+ lap_display14  | 10000000000000000000000000000000000000000000000
+ donestate      | unreached
+-------------------------------------------------------------------
+WARNING:Xst:1290 - Hierarchical block <timer_load_address> is unconnected in block <stopwatch>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <XLXI_159> is unconnected in block <stopwatch>.
+   It will be removed from the design.
+WARNING:Xst:1293 - FF/Latch <count_4> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <timer_flag> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_min_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_min_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_min_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_min_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_7> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_6> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_5> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_4> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_3> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_2> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_1> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sf_d_0> (without init value) has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tenths_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tenths_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tenths_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tenths_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_hundredths_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_hundredths_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_hundredths_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_hundredths_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tens_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_31> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_30> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_29> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_28> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_27> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_26> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_25> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_24> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_23> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_22> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_21> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_20> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_19> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_18> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_17> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_16> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_15> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_14> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_13> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_12> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_11> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_10> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_9> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_8> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_7> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_6> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <count_5> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd26> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd25> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd27> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd23> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd22> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd24> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd20> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd19> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd21> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd17> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd16> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd18> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd14> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd13> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd15> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd11> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd10> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd12> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd8> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd7> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd9> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd4> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd6> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tens_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tens_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_tens_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <next_mode_state> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_ones_3> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_ones_2> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_ones_1> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lap_ones_0> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd47> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd46> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd44> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd43> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd45> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd41> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd40> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd42> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd38> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd37> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd39> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd35> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd34> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd36> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd32> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd31> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd33> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd29> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd28> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd30> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mode_state> has a constant value of 0 in block <lcd_cntrl_inst>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 8-bit up counter                                      : 1
+# Registers                                            : 67
+ Flip-Flops                                            : 67
+# Comparators                                          : 5
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <lcd_cntrl_inst/lap_min_3> in Unit <stopwatch> is equivalent to the following 19 FFs/Latches, which will be removed : <lcd_cntrl_inst/lap_min_2> <lcd_cntrl_inst/lap_min_1> <lcd_cntrl_inst/lap_min_0> <lcd_cntrl_inst/lap_tenths_3> <lcd_cntrl_inst/lap_tenths_2> <lcd_cntrl_inst/lap_tenths_1> <lcd_cntrl_inst/lap_tenths_0> <lcd_cntrl_inst/lap_hundredths_3> <lcd_cntrl_inst/lap_hundredths_2> <lcd_cntrl_inst/lap_hundredths_1> <lcd_cntrl_inst/lap_hundredths_0> <lcd_cntrl_inst/lap_tens_3> <lcd_cntrl_inst/lap_tens_2> <lcd_cntrl_inst/lap_tens_1> <lcd_cntrl_inst/lap_tens_0> <lcd_cntrl_inst/lap_ones_3> <lcd_cntrl_inst/lap_ones_2> <lcd_cntrl_inst/lap_ones_1> <lcd_cntrl_inst/lap_ones_0> 
+WARNING:Xst:1293 - FF/Latch <FSM_FFd22> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd24> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd20> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd19> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd21> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd17> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd16> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd18> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd14> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd13> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd15> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd11> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd10> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd12> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd8> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd7> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd9> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd5> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd4> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd6> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd2> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd1> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd3> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd47> has a constant value of 1 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd46> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd44> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd43> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd45> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd41> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd40> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd42> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd38> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd37> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd39> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd35> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd34> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd36> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd32> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd31> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd33> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd29> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd28> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd30> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd26> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd25> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd27> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FSM_FFd23> has a constant value of 0 in block <FSM_0-parent>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch lcd_cntrl_inst/lap_flag hinder the constant cleaning in the block stopwatch.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_8> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_7> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_6> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_5> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_4> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_3> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_2> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_1> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_0> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/timer_flag> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/lap_flag> has a constant value of 1 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_7> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_6> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_5> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_4> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_3> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_2> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_1> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <lcd_cntrl_inst/sf_d_0> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/lap_min_3> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/clock_flag> has a constant value of 1 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/next_mode_state> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <XLXI_159/div_temp> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_31> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_30> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_29> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_28> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_27> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_26> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_25> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_24> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_23> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_22> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_21> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_20> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_19> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_18> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_17> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_16> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_15> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_14> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_13> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_12> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_11> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_10> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <lcd_cntrl_inst/count_9> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_159/div_262144> (without init value) has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <lcd_cntrl_inst/mode_state> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <stopwatch> ...
+
+Optimizing unit <CB8CE_HXILINX_stopwatch> ...
+WARNING:Xst:1290 - Hierarchical block <timer_load_address> is unconnected in block <stopwatch>.
+   It will be removed from the design.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block stopwatch, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : stopwatch.ngr
+Top Level Output File Name         : stopwatch
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 11
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700afg484-4 
+
+ Number of Slices:                        0  out of   5888     0%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    372     2%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.13 secs
+ 
+--> 
+
+Total memory usage is 261624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  224 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,14 @@
+[Inputs]
+clk
+dcm_lock
+lap_load
+mode_in
+reset
+strtstop
+[Outputs]
+clken
+lap_trigger
+load
+mode
+rst
+[BiDir]

@@ -1,0 +1,14 @@
+
+run
+-ifmt VHDL
+-ent timer_preset_exdes 
+-p xc3s700a-fg484-4
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn timer_preset_exdes 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

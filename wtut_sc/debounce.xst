@@ -1,0 +1,5 @@
+set -tmpdir "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/xst/projnav.tmp"
+set -xsthdpdir "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/xst"
+elaborate
+-ifn debounce.prj
+-ifmt mixed

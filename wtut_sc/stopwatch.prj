@@ -1,0 +1,3 @@
+vhdl work "wtut_sc/lcd_control.vhd"
+vhdl work "wtut_sc/clk_div_262k.vhd"
+vhdl work "stopwatch.vhf"

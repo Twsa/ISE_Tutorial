@@ -1,0 +1,19 @@
+MODULE stopwatch
+	SUBMODULE lcd_control
+		INSTANCE lcd_cntrl_inst
+	SUBMODULE clk_div_262k
+		INSTANCE XLXI_159
+	SUBMODULE time_cnt
+		INSTANCE timer_cnt
+	SUBMODULE timer_preset
+		INSTANCE t_preset
+	SUBMODULE debounce
+		INSTANCE lap_load_debounce
+	SUBMODULE debounce
+		INSTANCE mode_debounce
+	SUBMODULE debounce
+		INSTANCE strtstop_debounce
+	SUBMODULE statmach
+		INSTANCE timer_state
+	SUBMODULE dcm1
+		INSTANCE dcm_inst

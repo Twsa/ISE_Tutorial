@@ -1,0 +1,39 @@
+V3 21
+FL $XILINX/ISEexamples/wtut_sc/debounce.vhd 2017/07/18.10:58:36 P.20131013
+EN work/debounce 1500346720 FL $XILINX/ISEexamples/wtut_sc/debounce.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/debounce/Behavioral 1500346721 \
+      FL $XILINX/ISEexamples/wtut_sc/debounce.vhd EN work/debounce 1500346720
+FL $XILINX/ISEexamples/wtut_sc/stopwatch.vhf 2017/07/17.14:12:27 P.20131013
+EN work/CB8CE_HXILINX_stopwatch 1500275756 \
+      FL $XILINX/ISEexamples/wtut_sc/stopwatch.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CB8CE_HXILINX_stopwatch/Behavioral 1500275757 \
+      FL $XILINX/ISEexamples/wtut_sc/stopwatch.vhf \
+      EN work/CB8CE_HXILINX_stopwatch 1500275756
+EN work/stopwatch 1500275758 \
+      FL $XILINX/ISEexamples/wtut_sc/stopwatch.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/stopwatch/BEHAVIORAL 1500275759 \
+      FL $XILINX/ISEexamples/wtut_sc/stopwatch.vhf EN work/stopwatch 1500275758 \
+      CP lcd_control CP CB8CE_HXILINX_stopwatch CP clk_div_262k
+FL $XILINX/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd 2017/07/17.14:04:34 P.20131013
+EN work/clk_div_262k 1500275754 \
+      FL $XILINX/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/clk_div_262k/BEHAVIORAL 1500275755 \
+      FL $XILINX/ISEexamples/wtut_sc/wtut_sc/clk_div_262k.vhd \
+      EN work/clk_div_262k 1500275754
+FL $XILINX/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd 2017/07/17.14:04:34 P.20131013
+EN work/lcd_control 1500275752 \
+      FL $XILINX/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/lcd_control/lcd_control_arch 1500275753 \
+      FL $XILINX/ISEexamples/wtut_sc/wtut_sc/lcd_control.vhd EN work/lcd_control 1500275752
+FL $XILINX/ISEexamples/wtut_sc/wtut_sc/statmach.vhd 2017/07/17.14:04:35 P.20131013
+EN work/statmach 1500347920 FL $XILINX/ISEexamples/wtut_sc/wtut_sc/statmach.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/statmach/behavior 1500347921 \
+      FL $XILINX/ISEexamples/wtut_sc/wtut_sc/statmach.vhd EN work/statmach 1500347920
