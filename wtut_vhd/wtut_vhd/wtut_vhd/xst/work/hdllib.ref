@@ -1,0 +1,16 @@
+AR lcd_control lcd_control_arch C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/lcd_control.vhd sub00/vhpl05 1500082419
+EN clk_div_262k NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/clk_div_262k.vhd sub00/vhpl02 1500082416
+AR debounce behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/debounce.vhd sub00/vhpl07 1500082421
+EN time_cnt NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/time_cnt.vhd sub00/vhpl00 1500082422
+AR timer_preset timer_preset_a C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/timer_preset.vhd sub00/vhpl13 1500082413
+AR time_cnt time_cnt_arch C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/time_cnt.vhd sub00/vhpl01 1500082423
+AR statmach behavior C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/statmach.vhd sub00/vhpl09 1500082425
+AR stopwatch stopwatch_arch C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/stopwatch.vhd sub00/vhpl11 1500082427
+EN debounce NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/debounce.vhd sub00/vhpl06 1500082420
+EN timer_preset NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/timer_preset.vhd sub00/vhpl12 1500082412
+EN lcd_control NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/lcd_control.vhd sub00/vhpl04 1500082418
+EN dcm1 NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/dcm1.vhd sub00/vhpl14 1500082414
+AR dcm1 behavioral C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/dcm1.vhd sub00/vhpl15 1500082415
+AR clk_div_262k divide C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/clk_div_262k.vhd sub00/vhpl03 1500082417
+EN statmach NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/statmach.vhd sub00/vhpl08 1500082424
+EN stopwatch NULL C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/stopwatch.vhd sub00/vhpl10 1500082426
