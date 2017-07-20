@@ -10,3 +10,5 @@ ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc stopwatch.ucf -
 map -intstyle ise -p xc6slx4l-tqg144-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stopwatch_map.ncd stopwatch.ngd stopwatch.pcf 
 netgen -intstyle ise -ar Structure -tm stopwatch -w -dir netgen/synthesis -ofmt vhdl -sim stopwatch.ngc stopwatch_synthesis.vhd 
 netgen -intstyle ise -ar Structure -tm stopwatch -w -dir netgen/synthesis -ofmt vhdl -sim stopwatch.ngc stopwatch_synthesis.vhd 
+map -intstyle ise -p xc6slx4l-tqg144-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stopwatch_map.ncd stopwatch.ngd stopwatch.pcf 
+map -intstyle ise -p xc6slx4l-tqg144-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stopwatch_map.ncd stopwatch.ngd stopwatch.pcf 

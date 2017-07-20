@@ -1,0 +1,175 @@
+# Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do {stopwatch_tb.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ipcore_dir/timer_preset.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity timer_preset
+# -- Compiling architecture timer_preset_a of timer_preset
+# -- Loading package NUMERIC_STD
+# -- Loading entity dist_mem_gen_v7_2
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 dcm1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity dcm1
+# -- Compiling architecture BEHAVIORAL of dcm1
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 debounce.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity debounce
+# -- Compiling architecture Behavioral of debounce
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../time_cnt.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity time_cnt
+# -- Compiling architecture time_cnt_arch of time_cnt
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../statmach.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity statmach
+# -- Compiling architecture behavior of statmach
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:13 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../lcd_control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity lcd_control
+# -- Compiling architecture lcd_control_arch of lcd_control
+# End time: 10:50:13 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:14 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../clk_div_262k.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity clk_div_262k
+# -- Compiling architecture divide of clk_div_262k
+# End time: 10:50:14 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:14 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../stopwatch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity stopwatch
+# -- Compiling architecture stopwatch_arch of stopwatch
+# End time: 10:50:14 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:50:14 on Jul 20,2017
+# vcom -reportprogress 300 -explicit -93 ../stopwatch_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling entity stopwatch_tb
+# -- Compiling architecture testbench_arch of stopwatch_tb
+# End time: 10:50:14 on Jul 20,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -gui -do "do {stopwatch_tb.fdo}" 
+# Start time: 10:50:15 on Jul 20,2017
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.stopwatch_tb(testbench_arch)#1
+# Loading work.stopwatch(stopwatch_arch)#1
+# Loading ieee.numeric_std(body)
+# Loading work.timer_preset(timer_preset_a)#1
+# Loading xilinxcorelib.dist_mem_gen_v7_2(behavioral)#1
+# Loading unisim.vcomponents
+# Loading work.dcm1(behavioral)#1
+# Loading unisim.bufg(bufg_v)#1
+# Loading unisim.ibufg(ibufg_v)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading unisim.vpkg(body)
+# Loading unisim.dcm_sp(dcm_sp_v)#1
+# Loading unisim.dcm_sp_clock_divide_by_2(dcm_sp_clock_divide_by_2_v)#1
+# Loading unisim.dcm_sp_maximum_period_check(dcm_sp_maximum_period_check_v)#1
+# Loading unisim.dcm_sp_maximum_period_check(dcm_sp_maximum_period_check_v)#2
+# Loading unisim.dcm_sp_clock_lost(dcm_sp_clock_lost_v)#1
+# Loading work.clk_div_262k(divide)#1
+# Loading work.lcd_control(lcd_control_arch)#1
+# Loading work.debounce(behavioral)#1
+# Loading work.time_cnt(time_cnt_arch)#1
+# Loading work.statmach(behavior)#1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+#    Time: 0 ps  Iteration: 0  Instance: /stopwatch_tb/UUT/t_preset/U0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/timer_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/timer_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/timer_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/timer_inst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/timer_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /stopwatch_tb/UUT/t_preset/U0
+do C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/dcm_singal.do
+# End time: 10:52:04 on Jul 20,2017, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 7

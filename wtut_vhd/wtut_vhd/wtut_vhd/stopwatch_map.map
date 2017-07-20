@@ -10,7 +10,7 @@ Target Device  : xc6slx4l
 Target Package : tqg144
 Target Speed   : -1l
 Mapper Version : spartan6l -- $Revision: 1.55 $
-Mapped Date    : Sat Jul 15 11:18:35 2017
+Mapped Date    : Thu Jul 20 08:51:41 2017
 
 Mapping design into LUTs...
 ERROR:MapLib:30 - LOC constraint E12 on clk is invalid: No such site on the
