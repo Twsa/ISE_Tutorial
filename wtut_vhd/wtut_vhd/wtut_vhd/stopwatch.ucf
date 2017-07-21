@@ -1,0 +1,18 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "lcd_e" LOC = AB4;
+NET "lcd_rs" LOC = Y14;
+
+# PlanAhead Generated IO constraints 
+
+NET "lcd_rw" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated physical constraints 
+
+NET "lcd_rw" LOC = W13;
+NET "clk" LOC = E12;
+NET "reset" LOC = U15;
+NET "mode" LOC = T14;
+NET "strtstop" LOC = T15;
+			

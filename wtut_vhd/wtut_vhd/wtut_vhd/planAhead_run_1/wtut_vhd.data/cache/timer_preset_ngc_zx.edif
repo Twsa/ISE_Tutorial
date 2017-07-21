@@ -1,0 +1,95 @@
+(edif timer_preset
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2017 7 21 15 4 57)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure timer_preset.ngc timer_preset.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell GND
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port G
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library timer_preset_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell timer_preset
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port (array (rename spo "spo<19:0>") 20)
+              (direction OUTPUT))
+            (port (array (rename a "a<5:0>") 6)
+              (direction INPUT))
+            (designator "3s700afg484-5")
+            (property TYPE (string "timer_preset") (owner "Xilinx"))
+            (property BUS_INFO (string "20:OUTPUT:spo<19:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "6:INPUT:a<5:0>") (owner "Xilinx"))
+            (property X_CORE_INFO (string "dist_mem_gen_v7_2, Xilinx CORE Generator 14.7") (owner "Xilinx"))
+            (property CHECK_LICENSE_TYPE (string "timer_preset,dist_mem_gen_v7_2,{}") (owner "Xilinx"))
+            (property CORE_GENERATION_INFO (string "timer_preset,dist_mem_gen_v7_2,{c_addr_width=6,c_default_data=0,c_depth=64,c_elaboration_dir=C_/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/tmp/_cg/,c_family=spartan3,c_has_clk=0,c_has_d=0,c_has_dpo=0,c_has_dpra=0,c_has_i_ce=0,c_has_qdpo=0,c_has_qdpo_ce=0,c_has_qdpo_clk=0,c_has_qdpo_rst=0,c_has_qdpo_srst=0,c_has_qspo=0,c_has_qspo_ce=0,c_has_qspo_rst=0,c_has_qspo_srst=0,c_has_spo=1,c_has_spra=0,c_has_we=0,c_mem_init_file=no_coe_file_loaded,c_mem_type=0,c_parser_type=1,c_pipeline_stages=0,c_qce_joined=0,c_qualify_we=0,c_read_mif=0,c_reg_a_d_inputs=0,c_reg_dpra_input=0,c_sync_enable=1,c_width=20}") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "timer_preset_timer_preset") (owner "Xilinx"))
+          )
+          (contents
+            (instance XST_GND
+              (viewRef view_1 (cellRef GND (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net (rename spo_0_ "spo<0>")
+              (joined
+                (portRef G (instanceRef XST_GND))
+                (portRef (member spo 19))
+                (portRef (member spo 18))
+                (portRef (member spo 17))
+                (portRef (member spo 16))
+                (portRef (member spo 15))
+                (portRef (member spo 14))
+                (portRef (member spo 13))
+                (portRef (member spo 12))
+                (portRef (member spo 11))
+                (portRef (member spo 10))
+                (portRef (member spo 9))
+                (portRef (member spo 8))
+                (portRef (member spo 7))
+                (portRef (member spo 6))
+                (portRef (member spo 5))
+                (portRef (member spo 4))
+                (portRef (member spo 3))
+                (portRef (member spo 2))
+                (portRef (member spo 1))
+                (portRef (member spo 0))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design timer_preset
+    (cellRef timer_preset
+      (libraryRef timer_preset_lib)
+    )
+    (property PART (string "3s700afg484-5") (owner "Xilinx"))
+  )
+)
+

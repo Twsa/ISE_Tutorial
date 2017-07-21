@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\GitHub\ISE_Tutorial\wtut_vhd\wtut_vhd\wtut_vhd\stopwatch.ncd
+OUTFILE=D:\GitHub\ISE_Tutorial\wtut_vhd\wtut_vhd\wtut_vhd\stopwatch.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700a-4fg484
+WORKINGDIR=D:\GitHub\ISE_Tutorial\wtut_vhd\wtut_vhd\wtut_vhd
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,5 +1,0 @@
-set -tmpdir "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/xst/projnav.tmp"
-set -xsthdpdir "C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/xst"
-elaborate
--ifn clk_div_262k.prj
--ifmt mixed

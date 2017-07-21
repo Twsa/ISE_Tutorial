@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : xaw2vhdl
 --  /   /         Filename : dcm1.vhd
--- /___/   /\     Timestamp : 07/15/2017 09:08:56
+-- /___/   /\     Timestamp : 07/21/2017 15:01:36
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: xaw2vhdl-intstyle C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/dcm1.xaw -st dcm1.vhd
+--Command: xaw2vhdl-intstyle D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/dcm1.xaw -st dcm1.vhd
 --Design Name: dcm1
 --Device: xc3s700a-5fg484
 --

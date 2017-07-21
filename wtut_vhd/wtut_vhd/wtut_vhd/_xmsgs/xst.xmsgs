@@ -5,115 +5,44 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 71: <arg fmt="%s" index="1">load</arg> should be on the sensitivity list of the process
+<msg type="info" file="Xst" num="2555" delta="new" >&apos;<arg fmt="%s" index="1">-hierarchy_separator</arg>&apos; switch is being deprecated in a future release.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 72: <arg fmt="%s" index="1">q</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd</arg>&quot; line <arg fmt="%d" index="2">157</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">timer_preset</arg>&gt;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 73: <arg fmt="%s" index="1">enable</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd</arg>&quot; line <arg fmt="%d" index="2">165</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">dcm1</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 74: <arg fmt="%s" index="1">up</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd</arg>&quot; line <arg fmt="%d" index="2">165</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">CLK0_OUT</arg>&apos; of component &apos;<arg fmt="%s" index="4">dcm1</arg>&apos;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 75: <arg fmt="%s" index="1">hundredths_cnt</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/time_cnt.vhd</arg>&quot; line <arg fmt="%d" index="2">66</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;load&gt;, &lt;q&gt;, &lt;enable&gt;, &lt;up&gt;</arg>
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 77: <arg fmt="%s" index="1">hundredths_cnt</arg> should be on the sensitivity list of the process
+<msg type="info" file="Xst" num="1799" delta="new" >State <arg fmt="%s" index="1">donestate</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 80: <arg fmt="%s" index="1">hundredths_cnt</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">tc_up</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 83: <arg fmt="%s" index="1">hundredths_cnt</arg> should be on the sensitivity list of the process
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">tc_down</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd</arg>&quot; line <arg fmt="%s" index="2">165</arg>: Output port &lt;<arg fmt="%s" index="3">CLKIN_IBUFG_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_dcm1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">hundredths_cnt</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd</arg>&quot; line <arg fmt="%s" index="2">165</arg>: Output port &lt;<arg fmt="%s" index="3">CLK0_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_dcm1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 </msg>
 
-<msg type="info" file="Xst" num="1799" delta="old" >State <arg fmt="%s" index="1">donestate</arg> is never reached in FSM &lt;<arg fmt="%s" index="2">state</arg>&gt;.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">rst</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">STATMACH</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;sreg_FSM_FFd13&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">hundredths_cnt&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">timer_state_sreg1_FSM_FFd1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">stopwatch</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;timer_state_lap_trigger&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">hundredths_cnt&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">hundredths_cnt&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">hundredths_cnt&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-</msg>
-
-<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
-</msg>
-
-<msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">lap_hundredths</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_lap_hundredths[3]_GND_11_o_wide_mux_287_OUT</arg>&gt; for implementation as read-only block RAM.
-</msg>
-
-<msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">lap_tenths</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_lap_tenths[3]_GND_11_o_wide_mux_274_OUT</arg>&gt; for implementation as read-only block RAM.
-</msg>
-
-<msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">lap_ones</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_lap_ones[3]_GND_11_o_wide_mux_249_OUT</arg>&gt; for implementation as read-only block RAM.
-</msg>
-
-<msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">lap_tens</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_lap_tens[3]_GND_11_o_wide_mux_236_OUT</arg>&gt; for implementation as read-only block RAM.
-</msg>
-
-<msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">lap_min</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_lap_min[3]_GND_11_o_wide_mux_211_OUT</arg>&gt; for implementation as read-only block RAM.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">clk_divider_cnt_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">stopwatch</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">timer_state_sreg1_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">stopwatch</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;timer_state_lap_trigger&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

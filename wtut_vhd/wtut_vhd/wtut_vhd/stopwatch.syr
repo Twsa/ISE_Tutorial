@@ -1,39 +1,34 @@
-Release 14.7 - xst P.20131013 (nt)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.57 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.57 secs
  
 --> Reading design: stopwatch.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
-  2) HDL Parsing
-  3) HDL Elaboration
-  4) HDL Synthesis
-       4.1) HDL Synthesis Report
-  5) Advanced HDL Synthesis
-       5.1) Advanced HDL Synthesis Report
-  6) Low Level Synthesis
-  7) Partition Report
-  8) Design Summary
-       8.1) Primitive and Black Box Usage
-       8.2) Device utilization summary
-       8.3) Partition Resource Summary
-       8.4) Timing Report
-            8.4.1) Clock Information
-            8.4.2) Asynchronous Control Signals Information
-            8.4.3) Timing Summary
-            8.4.4) Timing Details
-            8.4.5) Cross Clock Domains Report
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
 
 
 =========================================================================
@@ -41,12 +36,13 @@ TABLE OF CONTENTS
 =========================================================================
 ---- Source Parameters
 Input File Name                    : "stopwatch.prj"
+Input Format                       : mixed
 Ignore Synthesis Constraint File   : NO
 
 ---- Target Parameters
 Output File Name                   : "stopwatch"
 Output Format                      : NGC
-Target Device                      : xc6slx4l-1L-tqg144
+Target Device                      : xc3s700a-4-fg484
 
 ---- Source Options
 Top Module Name                    : stopwatch
@@ -57,21 +53,25 @@ FSM Style                          : LUT
 RAM Extraction                     : Yes
 RAM Style                          : Auto
 ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
 Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
 ROM Style                          : Auto
+Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
-Shift Register Minimum Size        : 2
-Use DSP Block                      : Auto
+Multiplier Style                   : LUT
 Automatic Register Balancing       : No
 
 ---- Target Options
-LUT Combining                      : Auto
-Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
 Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 16
 Register Duplication               : YES
+Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Auto
 Use Synchronous Set                : Auto
@@ -82,7 +82,6 @@ Equivalent register Removal        : YES
 ---- General Options
 Optimization Goal                  : Speed
 Optimization Effort                : 1
-Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : Rebuilt
 RTL Output                         : Yes
@@ -95,7 +94,7 @@ Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
 BRAM Utilization Ratio             : 100
-DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
@@ -106,457 +105,395 @@ Cores Search Directories           : {"ipcore_dir"  }
 
 
 =========================================================================
-*                          HDL Parsing                                  *
+*                          HDL Compilation                              *
 =========================================================================
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\wtut_vhd\ipcore_dir\timer_preset.vhd" into library work
-Parsing entity <timer_preset>.
-Parsing architecture <timer_preset_a> of entity <timer_preset>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\wtut_vhd\dcm1.vhd" into library work
-Parsing entity <dcm1>.
-Parsing architecture <BEHAVIORAL> of entity <dcm1>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\wtut_vhd\debounce.vhd" into library work
-Parsing entity <debounce>.
-Parsing architecture <Behavioral> of entity <debounce>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" into library work
-Parsing entity <time_cnt>.
-Parsing architecture <time_cnt_arch> of entity <time_cnt>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\statmach.vhd" into library work
-Parsing entity <statmach>.
-Parsing architecture <behavior> of entity <statmach>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\lcd_control.vhd" into library work
-Parsing entity <lcd_control>.
-Parsing architecture <lcd_control_arch> of entity <lcd_control>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\clk_div_262k.vhd" into library work
-Parsing entity <clk_div_262k>.
-Parsing architecture <divide> of entity <clk_div_262k>.
-Parsing VHDL file "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd" into library work
-Parsing entity <stopwatch>.
-Parsing architecture <stopwatch_arch> of entity <stopwatch>.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/timer_preset.vhd" in Library work.
+Entity <timer_preset> compiled.
+Entity <timer_preset> (Architecture <timer_preset_a>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/dcm1.vhd" in Library work.
+Entity <dcm1> compiled.
+Entity <dcm1> (Architecture <BEHAVIORAL>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/clk_div_262k.vhd" in Library work.
+Entity <clk_div_262k> compiled.
+Entity <clk_div_262k> (Architecture <divide>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/lcd_control.vhd" in Library work.
+Entity <lcd_control> compiled.
+Entity <lcd_control> (Architecture <lcd_control_arch>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/debounce.vhd" in Library work.
+Entity <debounce> compiled.
+Entity <debounce> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/time_cnt.vhd" in Library work.
+Entity <time_cnt> compiled.
+Entity <time_cnt> (Architecture <time_cnt_arch>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/statmach.vhd" in Library work.
+Entity <statmach> compiled.
+Entity <statmach> (Architecture <behavior>) compiled.
+Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" in Library work.
+Entity <stopwatch> compiled.
+Entity <stopwatch> (Architecture <stopwatch_arch>) compiled.
 
 =========================================================================
-*                            HDL Elaboration                            *
+*                     Design Hierarchy Analysis                         *
 =========================================================================
+Analyzing hierarchy for entity <stopwatch> in library <work> (architecture <stopwatch_arch>).
 
-Elaborating entity <stopwatch> (architecture <stopwatch_arch>) from library <work>.
+Analyzing hierarchy for entity <dcm1> in library <work> (architecture <BEHAVIORAL>).
 
-Elaborating entity <timer_preset> (architecture <timer_preset_a>) from library <work>.
+Analyzing hierarchy for entity <clk_div_262k> in library <work> (architecture <divide>).
 
-Elaborating entity <dcm1> (architecture <BEHAVIORAL>) from library <work>.
+Analyzing hierarchy for entity <lcd_control> in library <work> (architecture <lcd_control_arch>).
 
-Elaborating entity <clk_div_262k> (architecture <divide>) from library <work>.
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <Behavioral>).
 
-Elaborating entity <lcd_control> (architecture <lcd_control_arch>) from library <work>.
+Analyzing hierarchy for entity <time_cnt> in library <work> (architecture <time_cnt_arch>).
 
-Elaborating entity <debounce> (architecture <Behavioral>) from library <work>.
+Analyzing hierarchy for entity <STATMACH> in library <work> (architecture <behavior>).
 
-Elaborating entity <time_cnt> (architecture <time_cnt_arch>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 71: load should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 72: q should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 73: enable should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 74: up should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 75: hundredths_cnt should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 77: hundredths_cnt should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 80: hundredths_cnt should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd" Line 83: hundredths_cnt should be on the sensitivity list of the process
+INFO:Xst:2555 - '-hierarchy_separator' switch is being deprecated in a future release.
 
-Elaborating entity <statmach> (architecture <behavior>) from library <work>.
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <stopwatch> in library <work> (Architecture <stopwatch_arch>).
+    Set user-defined property "LOC =  E12" for signal <clk> in unit <stopwatch>.
+    Set user-defined property "LOC =  Y15 AB16 Y16 AA12 AB12 AB17 AB18 Y13" for signal <sf_d> in unit <stopwatch>.
+WARNING:Xst:2211 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" line 157: Instantiating black box module <timer_preset>.
+WARNING:Xst:753 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" line 165: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'dcm1'.
+WARNING:Xst:753 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" line 165: Unconnected output port 'CLK0_OUT' of component 'dcm1'.
+Entity <stopwatch> analyzed. Unit <stopwatch> generated.
+
+Analyzing Entity <dcm1> in library <work> (Architecture <BEHAVIORAL>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLKFX_DIVIDE =  25" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLKFX_MULTIPLY =  13" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <dcm1>.
+    Set user-defined property "STARTUP_WAIT =  TRUE" for instance <DCM_SP_INST> in unit <dcm1>.
+Entity <dcm1> analyzed. Unit <dcm1> generated.
+
+Analyzing Entity <clk_div_262k> in library <work> (Architecture <divide>).
+Entity <clk_div_262k> analyzed. Unit <clk_div_262k> generated.
+
+Analyzing Entity <lcd_control> in library <work> (Architecture <lcd_control_arch>).
+Entity <lcd_control> analyzed. Unit <lcd_control> generated.
+
+Analyzing Entity <debounce> in library <work> (Architecture <Behavioral>).
+Entity <debounce> analyzed. Unit <debounce> generated.
+
+Analyzing Entity <time_cnt> in library <work> (Architecture <time_cnt_arch>).
+WARNING:Xst:819 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/time_cnt.vhd" line 66: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <load>, <q>, <enable>, <up>
+Entity <time_cnt> analyzed. Unit <time_cnt> generated.
+
+Analyzing Entity <STATMACH> in library <work> (Architecture <behavior>).
+Entity <STATMACH> analyzed. Unit <STATMACH> generated.
+
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Synthesizing Unit <stopwatch>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd".
-    Set property "LOC = Y15,AB16,Y16,AA12,AB12,AB17,AB18,Y13" for signal <sf_d>.
-    Set property "LOC = E12" for signal <clk>.
-INFO:Xst:3210 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd" line 165: Output port <CLKIN_IBUFG_OUT> of the instance <Inst_dcm1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\stopwatch.vhd" line 165: Output port <CLK0_OUT> of the instance <Inst_dcm1> is unconnected or connected to loadless signal.
-    Found 6-bit register for signal <address>.
-    Found 6-bit adder for signal <address[5]_GND_5_o_add_1_OUT> created at line 244.
-    Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred   6 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
-Unit <stopwatch> synthesized.
-
-Synthesizing Unit <dcm1>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\wtut_vhd\dcm1.vhd".
-    Summary:
-	no macro.
-Unit <dcm1> synthesized.
+Performing bidirectional port resolution...
 
 Synthesizing Unit <clk_div_262k>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\clk_div_262k.vhd".
-    Found 32-bit register for signal <cnt>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/clk_div_262k.vhd".
     Found 1-bit register for signal <div_262144>.
+    Found 32-bit up counter for signal <cnt>.
+    Found 32-bit comparator greatequal for signal <cnt$cmp_ge0000> created at line 36.
     Found 1-bit register for signal <div_temp>.
-    Found 32-bit adder for signal <cnt[31]_GND_10_o_add_1_OUT> created at line 41.
-    Found 32-bit comparator greater for signal <n0000> created at line 36
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  34 D-type flip-flop(s).
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <clk_div_262k> synthesized.
 
+
 Synthesizing Unit <lcd_control>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\lcd_control.vhd".
-    Found 4-bit register for signal <lap_min>.
-    Found 4-bit register for signal <lap_tens>.
-    Found 4-bit register for signal <lap_ones>.
-    Found 4-bit register for signal <lap_tenths>.
-    Found 4-bit register for signal <lap_hundredths>.
-    Found 1-bit register for signal <timer_flag>.
-    Found 1-bit register for signal <next_mode_state>.
-    Found 1-bit register for signal <clock_flag>.
-    Found 8-bit register for signal <sf_d>.
-    Found 32-bit register for signal <count>.
-    Found 6-bit register for signal <state>.
-    Found 1-bit register for signal <mode_state>.
-    Found 32-bit register for signal <count_temp>.
-    Found 1-bit register for signal <lap_flag>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/lcd_control.vhd".
 INFO:Xst:1799 - State donestate is never reached in FSM <state>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
-    | States             | 48                                             |
+    | States             | 47                                             |
     | Transitions        | 99                                             |
     | Inputs             | 7                                              |
-    | Outputs            | 6                                              |
-    | Clock              | clk (rising_edge)                              |
-    | Reset              | rst (positive)                                 |
+    | Outputs            | 48                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
     | Reset type         | synchronous                                    |
     | Reset State        | waiting                                        |
     | Power Up State     | waiting                                        |
-    | Encoding           | auto                                           |
+    | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit adder for signal <count_temp[31]_GND_11_o_add_317_OUT> created at line 654.
-    Found 16x8-bit Read Only RAM for signal <lap_min[3]_GND_11_o_wide_mux_211_OUT>
-    Found 16x8-bit Read Only RAM for signal <lap_tens[3]_GND_11_o_wide_mux_236_OUT>
-    Found 16x8-bit Read Only RAM for signal <lap_ones[3]_GND_11_o_wide_mux_249_OUT>
-    Found 16x8-bit Read Only RAM for signal <lap_tenths[3]_GND_11_o_wide_mux_274_OUT>
-    Found 16x8-bit Read Only RAM for signal <lap_hundredths[3]_GND_11_o_wide_mux_287_OUT>
-    Found 32-bit comparator greater for signal <n0000> created at line 57
-    Found 32-bit comparator lessequal for signal <n0006> created at line 81
-    Found 32-bit comparator greater for signal <count[31]_GND_11_o_LessThan_290_o> created at line 573
-    Found 32-bit comparator lessequal for signal <n0086> created at line 573
+    Found 8-bit register for signal <sf_d>.
+    Found 1-bit register for signal <clock_flag>.
+    Found 32-bit comparator greater for signal <control$cmp_gt0000> created at line 125.
+    Found 32-bit comparator lessequal for signal <control$cmp_le0000> created at line 125.
+    Found 32-bit comparator lessequal for signal <control$cmp_le0001> created at line 64.
+    Found 32-bit register for signal <count>.
+    Found 32-bit up counter for signal <count_temp>.
+    Found 1-bit register for signal <lap_flag>.
+    Found 4-bit register for signal <lap_hundredths>.
+    Found 4-bit register for signal <lap_min>.
+    Found 4-bit register for signal <lap_ones>.
+    Found 4-bit register for signal <lap_tens>.
+    Found 4-bit register for signal <lap_tenths>.
+    Found 1-bit register for signal <mode_state>.
+    Found 1-bit register for signal <next_mode_state>.
+    Found 32-bit comparator greatequal for signal <state$cmp_ge0000> created at line 57.
+    Found 1-bit register for signal <timer_flag>.
     Summary:
-	inferred   5 RAM(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred  97 D-type flip-flop(s).
-	inferred   4 Comparator(s).
-	inferred  11 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  65 D-type flip-flop(s).
+	inferred   4 Comparator(s).
 Unit <lcd_control> synthesized.
 
+
 Synthesizing Unit <debounce>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\wtut_vhd\debounce.vhd".
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/debounce.vhd".
+    Found 1-bit register for signal <Q1>.
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q3>.
-    Found 1-bit register for signal <Q1>.
     Summary:
 	inferred   3 D-type flip-flop(s).
 Unit <debounce> synthesized.
 
+
 Synthesizing Unit <time_cnt>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\time_cnt.vhd".
-    Found 4-bit register for signal <tenths_cnt>.
-    Found 4-bit register for signal <ones_cnt>.
-    Found 4-bit register for signal <tens_cnt>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/time_cnt.vhd".
+WARNING:Xst:1780 - Signal <tc_up> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <tc_down> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 4-bit latch for signal <hundredths_cnt>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit addsub for signal <hundredths_cnt$share0000> created at line 74.
     Found 4-bit register for signal <mins_cnt>.
-    Found 4-bit adder for signal <hundredths_cnt[3]_GND_13_o_add_11_OUT> created at line 77.
-    Found 4-bit adder for signal <tenths_cnt[3]_GND_13_o_add_22_OUT> created at line 102.
-    Found 4-bit adder for signal <ones_cnt[3]_GND_13_o_add_36_OUT> created at line 127.
-    Found 4-bit adder for signal <tens_cnt[3]_GND_13_o_add_52_OUT> created at line 152.
-    Found 4-bit adder for signal <mins_cnt[3]_GND_13_o_add_70_OUT> created at line 177.
-    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_15_OUT<3:0>> created at line 83.
-    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_27_OUT<3:0>> created at line 108.
-    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_42_OUT<3:0>> created at line 133.
-    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_59_OUT<3:0>> created at line 158.
-    Found 4-bit subtractor for signal <GND_13_o_GND_13_o_sub_78_OUT<3:0>> created at line 183.
-WARNING:Xst:737 - Found 1-bit latch for signal <hundredths_cnt<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <hundredths_cnt<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <hundredths_cnt<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <hundredths_cnt<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit addsub for signal <mins_cnt$share0000>.
+    Found 4-bit register for signal <ones_cnt>.
+    Found 4-bit addsub for signal <ones_cnt$share0000>.
+    Found 4-bit register for signal <tens_cnt>.
+    Found 4-bit addsub for signal <tens_cnt$share0000>.
+    Found 4-bit register for signal <tenths_cnt>.
+    Found 4-bit addsub for signal <tenths_cnt$share0000>.
     Summary:
-	inferred   6 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
-	inferred   4 Latch(s).
-	inferred  42 Multiplexer(s).
+	inferred   5 Adder/Subtractor(s).
 Unit <time_cnt> synthesized.
 
-Synthesizing Unit <statmach>.
-    Related source file is "C:\Xilinx\14.7\ISE_DS\ISE\ISEexamples\wtut_vhd\wtut_vhd\statmach.vhd".
-    Found 1-bit register for signal <clken>.
-    Found 2-bit register for signal <sreg1>.
-    Found 1-bit register for signal <lap_trigger>.
-    Found 4-bit register for signal <sreg>.
-    Found 1-bit register for signal <rst>.
+
+Synthesizing Unit <STATMACH>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/statmach.vhd".
+    Found finite state machine <FSM_1> for signal <sreg1>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | state_reset               (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 01                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Found finite state machine <FSM_2> for signal <sreg>.
     -----------------------------------------------------------------------
     | States             | 13                                             |
-    | Transitions        | 29                                             |
-    | Inputs             | 5                                              |
-    | Outputs            | 7                                              |
-    | Clock              | clk (rising_edge)                              |
-    | Reset              | state_reset (positive)                         |
+    | Transitions        | 27                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | state_reset               (positive)           |
     | Reset type         | asynchronous                                   |
     | Reset State        | 0000                                           |
-    | Encoding           | auto                                           |
+    | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 2-bit 3-to-1 multiplexer for signal <sreg1[1]_GND_18_o_wide_mux_28_OUT> created at line 269.
-    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <sreg1> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Found 1-bit register for signal <clken>.
+    Found 1-bit register for signal <rst>.
+    Found 1-bit register for signal <lap_trigger>.
     Summary:
-	inferred   5 D-type flip-flop(s).
-	inferred  16 Multiplexer(s).
-	inferred   1 Finite State Machine(s).
-Unit <statmach> synthesized.
+	inferred   2 Finite State Machine(s).
+	inferred   3 D-type flip-flop(s).
+Unit <STATMACH> synthesized.
+
+
+Synthesizing Unit <dcm1>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/dcm1.vhd".
+Unit <dcm1> synthesized.
+
+
+Synthesizing Unit <stopwatch>.
+    Related source file is "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd".
+    Found 6-bit up counter for signal <address>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <stopwatch> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 5
- 16x8-bit single-port Read Only RAM                    : 5
-# Adders/Subtractors                                   : 9
- 32-bit adder                                          : 2
- 4-bit adder                                           : 1
- 4-bit addsub                                          : 4
- 4-bit subtractor                                      : 1
- 6-bit adder                                           : 1
-# Registers                                            : 34
+# Adders/Subtractors                                   : 5
+ 4-bit addsub                                          : 5
+# Counters                                             : 3
+ 32-bit up counter                                     : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 30
  1-bit register                                        : 19
- 2-bit register                                        : 1
- 32-bit register                                       : 3
+ 32-bit register                                       : 1
  4-bit register                                        : 9
- 6-bit register                                        : 1
  8-bit register                                        : 1
-# Latches                                              : 4
- 1-bit latch                                           : 4
+# Latches                                              : 1
+ 4-bit latch                                           : 1
 # Comparators                                          : 5
- 32-bit comparator greater                             : 3
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 70
- 1-bit 2-to-1 multiplexer                              : 29
- 2-bit 2-to-1 multiplexer                              : 1
- 2-bit 3-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 7
- 32-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 30
- 6-bit 2-to-1 multiplexer                              : 1
-# FSMs                                                 : 2
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <timer_state/sreg/FSM> on signal <sreg[1:13]> with one-hot encoding.
+------------------------
+ State | Encoding
+------------------------
+ 0000  | 0000000000001
+ 0001  | 0000000010000
+ 0010  | 0000001000000
+ 0011  | 0000000001000
+ 0100  | 0000000100000
+ 0101  | 0000100000000
+ 0110  | 0000010000000
+ 0111  | 0000000000100
+ 1000  | 0001000000000
+ 1001  | 1000000000000
+ 1010  | 0010000000000
+ 1011  | 0100000000000
+ 1100  | 0000000000010
+------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <timer_state/sreg1/FSM> on signal <sreg1[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <lcd_cntrl_inst/state/FSM> on signal <state[1:47]> with one-hot encoding.
+-------------------------------------------------------------------
+ State          | Encoding
+-------------------------------------------------------------------
+ waiting        | 00000000000000000000000000000000000000000000001
+ init1          | 00000000000000000000000000000000000000000000010
+ init2          | 00000000000000000000000000000000000000000000100
+ init3          | 00000000000000000000000000000000000000000001000
+ init4          | 00000000000000000000000000000000000000000010000
+ init5          | 00000000000000000000000000000000000000000100000
+ init6          | 00000000000000000000000000000000000000001000000
+ init7          | 00000000000000000000000000000000000000010000000
+ word1          | 00000000000000000000000000000000000000100000000
+ word2          | 00000000000000000000000000000000000001000000000
+ word3          | 00000000000000000000000000000000000010000000000
+ word4          | 00000000000000000000000000000000000100000000000
+ word5          | 00000000000000000000000000000000001000000000000
+ alt_word5      | 00000000000000000000000000000000010000000000000
+ word6          | 00000000000000000000000000000001000000000000000
+ word7          | 00000000000000000000000000000010000000000000000
+ word8          | 00000000000000000000000000000100000000000000000
+ word9          | 00000000000000000000000000001000000000000000000
+ word10         | 00000000000000000000000000010000000000000000000
+ time_display1  | 00000000000000000000000000000000100000000000000
+ time_display2  | 00000000000000000000000000100000000000000000000
+ time_display3  | 00000000000000000000000001000000000000000000000
+ time_display4  | 00000000000000000000000010000000000000000000000
+ time_display5  | 00000000000000000000000100000000000000000000000
+ time_display6  | 00000000000000000000001000000000000000000000000
+ time_display7  | 00000000000000000000010000000000000000000000000
+ time_display8  | 00000000000000000000100000000000000000000000000
+ time_display9  | 00000000000000000001000000000000000000000000000
+ time_display10 | 00000000000000000010000000000000000000000000000
+ time_display11 | 00000000000000000100000000000000000000000000000
+ time_display12 | 00000000000000001000000000000000000000000000000
+ time_display13 | 00000000000000010000000000000000000000000000000
+ time_display14 | 00000000000000100000000000000000000000000000000
+ lap_display1   | 00000000000001000000000000000000000000000000000
+ lap_display2   | 00000000000010000000000000000000000000000000000
+ lap_display3   | 00000000000100000000000000000000000000000000000
+ lap_display4   | 00000000001000000000000000000000000000000000000
+ lap_display5   | 00000000010000000000000000000000000000000000000
+ lap_display6   | 00000000100000000000000000000000000000000000000
+ lap_display7   | 00000001000000000000000000000000000000000000000
+ lap_display8   | 00000010000000000000000000000000000000000000000
+ lap_display9   | 00000100000000000000000000000000000000000000000
+ lap_display10  | 00001000000000000000000000000000000000000000000
+ lap_display11  | 00010000000000000000000000000000000000000000000
+ lap_display12  | 00100000000000000000000000000000000000000000000
+ lap_display13  | 01000000000000000000000000000000000000000000000
+ lap_display14  | 10000000000000000000000000000000000000000000000
+ donestate      | unreached
+-------------------------------------------------------------------
 Reading core <ipcore_dir/timer_preset.ngc>.
 Loading core <timer_preset> for timing and area information for instance <t_preset>.
-
-Synthesizing (advanced) Unit <clk_div_262k>.
-The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
-Unit <clk_div_262k> synthesized (advanced).
-
-Synthesizing (advanced) Unit <lcd_control>.
-The following registers are absorbed into counter <count_temp>: 1 register on signal <count_temp>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <lap_hundredths> prevents it from being combined with the RAM <Mram_lap_hundredths[3]_GND_11_o_wide_mux_287_OUT> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <lap_hundredths> |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <lap_tenths> prevents it from being combined with the RAM <Mram_lap_tenths[3]_GND_11_o_wide_mux_274_OUT> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <lap_tenths>    |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <lap_ones> prevents it from being combined with the RAM <Mram_lap_ones[3]_GND_11_o_wide_mux_249_OUT> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <lap_ones>      |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <lap_tens> prevents it from being combined with the RAM <Mram_lap_tens[3]_GND_11_o_wide_mux_236_OUT> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <lap_tens>      |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <lap_min> prevents it from being combined with the RAM <Mram_lap_min[3]_GND_11_o_wide_mux_211_OUT> for implementation as read-only block RAM.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 16-word x 8-bit                     |          |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <lap_min>       |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <lcd_control> synthesized (advanced).
-
-Synthesizing (advanced) Unit <stopwatch>.
-The following registers are absorbed into counter <address>: 1 register on signal <address>.
-Unit <stopwatch> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 5
- 16x8-bit single-port distributed Read Only RAM        : 5
-# Adders/Subtractors                                   : 6
- 4-bit adder                                           : 1
- 4-bit addsub                                          : 4
- 4-bit subtractor                                      : 1
+# FSMs                                                 : 3
+# Adders/Subtractors                                   : 5
+ 4-bit addsub                                          : 5
 # Counters                                             : 3
  32-bit up counter                                     : 2
  6-bit up counter                                      : 1
-# Registers                                            : 97
- Flip-Flops                                            : 97
+# Registers                                            : 95
+ Flip-Flops                                            : 95
+# Latches                                              : 1
+ 4-bit latch                                           : 1
 # Comparators                                          : 5
- 32-bit comparator greater                             : 3
+ 32-bit comparator greatequal                          : 2
+ 32-bit comparator greater                             : 1
  32-bit comparator lessequal                           : 2
-# Multiplexers                                         : 68
- 1-bit 2-to-1 multiplexer                              : 29
- 2-bit 2-to-1 multiplexer                              : 1
- 2-bit 3-to-1 multiplexer                              : 1
- 3-bit 2-to-1 multiplexer                              : 7
- 4-bit 2-to-1 multiplexer                              : 30
-# FSMs                                                 : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <timer_state/FSM_2> on signal <sreg[1:4]> with user encoding.
--------------------
- State | Encoding
--------------------
- 0000  | 0000
- 1100  | 1100
- 0001  | 0001
- 0011  | 0011
- 0111  | 0111
- 0010  | 0010
- 0100  | 0100
- 0110  | 0110
- 1000  | 1000
- 1010  | 1010
- 0101  | 0101
- 1001  | 1001
- 1011  | 1011
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <lcd_cntrl_inst/FSM_0> on signal <state[1:6]> with user encoding.
-----------------------------
- State          | Encoding
-----------------------------
- waiting        | 000000
- init1          | 000001
- init2          | 000010
- init3          | 000011
- init4          | 000100
- init5          | 000101
- init6          | 000110
- init7          | 000111
- word1          | 001000
- word2          | 001001
- word3          | 001010
- word4          | 001011
- word5          | 001100
- alt_word5      | 001101
- word6          | 001110
- word7          | 001111
- word8          | 010000
- word9          | 010001
- word10         | 010010
- time_display1  | 010011
- time_display2  | 010100
- time_display3  | 010101
- time_display4  | 010110
- time_display5  | 010111
- time_display6  | 011000
- time_display7  | 011001
- time_display8  | 011010
- time_display9  | 011011
- time_display10 | 011100
- time_display11 | 011101
- time_display12 | 011110
- time_display13 | 011111
- time_display14 | 100000
- lap_display1   | 100001
- lap_display2   | 100010
- lap_display3   | 100011
- lap_display4   | 100100
- lap_display5   | 100101
- lap_display6   | 100110
- lap_display7   | 100111
- lap_display8   | 101000
- lap_display9   | 101001
- lap_display10  | 101010
- lap_display11  | 101011
- lap_display12  | 101100
- lap_display13  | 101101
- lap_display14  | 101110
- donestate      | unreached
-----------------------------
+INFO:Xst:2261 - The FF/Latch <rst> in Unit <STATMACH> is equivalent to the following FF/Latch, which will be removed : <sreg_FSM_FFd13> 
 
 Optimizing unit <stopwatch> ...
 
-Optimizing unit <statmach> ...
-
 Optimizing unit <lcd_control> ...
 
+Optimizing unit <STATMACH> ...
+
 Optimizing unit <time_cnt> ...
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_18> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_19> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_20> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_21> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_22> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_23> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_24> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_25> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_26> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_27> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_28> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_29> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_30> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <clk_divider_cnt_31> has a constant value of 0 in block <stopwatch>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <timer_state_sreg1_1> in Unit <stopwatch> is equivalent to the following FF/Latch, which will be removed : <timer_state_lap_trigger> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block stopwatch, actual ratio is 16.
-FlipFlop timer_state_sreg_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop timer_state_sreg_FSM_FFd3 has been replicated 1 time(s)
-FlipFlop timer_state_sreg_FSM_FFd4 has been replicated 1 time(s)
+INFO:Xst:2261 - The FF/Latch <timer_state_sreg1_FSM_FFd1> in Unit <stopwatch> is equivalent to the following FF/Latch, which will be removed : <timer_state_lap_trigger> 
+Found area constraint ratio of 100 (+ 5) on block stopwatch, actual ratio is 4.
 
 Final Macro Processing ...
 
@@ -564,8 +501,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 165
- Flip-Flops                                            : 165
+# Registers                                            : 225
+ Flip-Flops                                            : 225
 
 =========================================================================
 
@@ -581,33 +518,47 @@ Partition Implementation Status
 -------------------------------
 
 =========================================================================
-*                            Design Summary                             *
+*                            Final Report                               *
 =========================================================================
+Final Results
+RTL Top Level Output File Name     : stopwatch.ngr
+Top Level Output File Name         : stopwatch
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
 
-Top Level Output File Name         : stopwatch.ngc
+Design Statistics
+# IOs                              : 16
 
-Primitive and Black Box Usage:
-------------------------------
-# BELS                             : 473
+Cell Usage :
+# BELS                             : 643
 #      GND                         : 2
-#      INV                         : 4
-#      LUT1                        : 18
-#      LUT2                        : 12
+#      INV                         : 19
+#      LUT1                        : 70
+#      LUT2                        : 33
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
 #      LUT3                        : 54
-#      LUT4                        : 52
-#      LUT5                        : 73
-#      LUT6                        : 123
-#      MUXCY                       : 75
-#      MUXF7                       : 9
+#      LUT3_D                      : 3
+#      LUT3_L                      : 9
+#      LUT4                        : 197
+#      LUT4_D                      : 15
+#      LUT4_L                      : 15
+#      MUXCY                       : 144
+#      MUXF5                       : 14
 #      VCC                         : 1
-#      XORCY                       : 50
-# FlipFlops/Latches                : 169
-#      FD                          : 55
-#      FDC                         : 11
-#      FDCE                        : 19
+#      XORCY                       : 64
+# FlipFlops/Latches                : 229
+#      FD                          : 44
+#      FDC                         : 13
+#      FDCE                        : 22
+#      FDE                         : 1
 #      FDP                         : 1
-#      FDR                         : 59
-#      FDRE                        : 20
+#      FDR                         : 69
+#      FDRE                        : 66
+#      FDRSE                       : 1
+#      FDS                         : 7
+#      FDSE                        : 1
 #      LD                          : 4
 # Clock Buffers                    : 3
 #      BUFG                        : 3
@@ -617,31 +568,20 @@ Primitive and Black Box Usage:
 #      OBUF                        : 11
 # DCMs                             : 1
 #      DCM_SP                      : 1
+=========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 6slx4ltqg144-1l 
+Selected Device : 3s700afg484-4 
 
-
-Slice Logic Utilization: 
- Number of Slice Registers:             169  out of   4800     3%  
- Number of Slice LUTs:                  336  out of   2400    14%  
-    Number used as Logic:               336  out of   2400    14%  
-
-Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    391
-   Number with an unused Flip Flop:     222  out of    391    56%  
-   Number with an unused LUT:            55  out of    391    14%  
-   Number of fully used LUT-FF pairs:   114  out of    391    29%  
-   Number of unique control sets:        13
-
-IO Utilization: 
+ Number of Slices:                      242  out of   5888     4%  
+ Number of Slice Flip Flops:            229  out of  11776     1%  
+ Number of 4 input LUTs:                418  out of  11776     3%  
  Number of IOs:                          16
- Number of bonded IOBs:                  16  out of    102    15%  
-
-Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of bonded IOBs:                  16  out of    372     4%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      8    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -653,7 +593,7 @@ Partition Resource Summary:
 
 
 =========================================================================
-Timing Report
+TIMING REPORT
 
 NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
       FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
@@ -664,244 +604,193 @@ Clock Information:
 -----------------------------------+----------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)            | Load  |
 -----------------------------------+----------------------------------+-------+
-clk                                | DCM_SP:CLKFX                     | 132   |
-clk_divider_div_262144             | BUFG                             | 33    |
-timer_state_rst                    | NONE(timer_inst_hundredths_cnt_2)| 4     |
+clk                                | Inst_dcm1_DCM_SP_INST:CLKFX      | 187   |
+clk_divider_div_262144             | BUFG                             | 38    |
+timer_state_rst                    | NONE(timer_inst_hundredths_cnt_3)| 4     |
 -----------------------------------+----------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-No asynchronous control signals found in this design
+-----------------------------------------------------------+----------------------------+-------+
+Control Signal                                             | Buffer(FF name)            | Load  |
+-----------------------------------------------------------+----------------------------+-------+
+timer_state_rst(timer_state_rst:Q)                         | NONE(timer_inst_mins_cnt_0)| 16    |
+timer_state_state_reset(timer_state_state_reset_and00001:O)| NONE(timer_state_clken)    | 14    |
+mode_control(timer_state_sreg_FSM_Out7:O)                  | NONE(address_0)            | 6     |
+-----------------------------------------------------------+----------------------------+-------+
 
 Timing Summary:
 ---------------
-Speed Grade: -1
+Speed Grade: -4
 
-   Minimum period: 9.556ns (Maximum Frequency: 104.651MHz)
-   Minimum input arrival time before clock: 4.820ns
-   Maximum output required time after clock: 15.196ns
+   Minimum period: 8.157ns (Maximum Frequency: 122.600MHz)
+   Minimum input arrival time before clock: 3.895ns
+   Maximum output required time after clock: 14.285ns
    Maximum combinational path delay: No path found
 
-Timing Details:
----------------
+Timing Detail:
+--------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 6.691ns (frequency: 149.453MHz)
-  Total number of paths / destination ports: 73395 / 126
+  Clock period: 5.136ns (frequency: 194.698MHz)
+  Total number of paths / destination ports: 8128 / 278
 -------------------------------------------------------------------------
-Delay:               12.867ns (Levels of Logic = 37)
-  Source:            lcd_cntrl_inst_count_13 (FF)
+Delay:               9.877ns (Levels of Logic = 7)
+  Source:            lcd_cntrl_inst_state_FSM_FFd35 (FF)
   Destination:       lcd_cntrl_inst_count_temp_31 (FF)
   Source Clock:      clk rising 0.5X
   Destination Clock: clk rising 0.5X
 
-  Data Path: lcd_cntrl_inst_count_13 to lcd_cntrl_inst_count_temp_31
+  Data Path: lcd_cntrl_inst_state_FSM_FFd35 to lcd_cntrl_inst_count_temp_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.732   1.901  lcd_cntrl_inst_count_13 (lcd_cntrl_inst_count_13)
-     LUT6:I0->O            1   0.454   1.212  lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>11 (lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>11)
-     LUT4:I0->O            2   0.454   1.651  lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>15 (lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>1)
-     LUT6:I0->O           16   0.454   1.569  lcd_cntrl_inst_GND_11_o_count[31]_equal_289_o<31> (lcd_cntrl_inst_GND_11_o_count[31]_equal_289_o)
-     LUT5:I3->O           32   0.454   2.085  lcd_cntrl_inst_Mmux_state_flag11 (lcd_cntrl_inst_state_flag)
-     LUT3:I0->O            1   0.454   0.000  lcd_cntrl_inst_count_Mcount_temp_lut<0> (lcd_cntrl_inst_count_Mcount_temp_lut<0>)
-     MUXCY:S->O            1   0.370   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<0> (lcd_cntrl_inst_count_Mcount_temp_cy<0>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<1> (lcd_cntrl_inst_count_Mcount_temp_cy<1>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<2> (lcd_cntrl_inst_count_Mcount_temp_cy<2>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<3> (lcd_cntrl_inst_count_Mcount_temp_cy<3>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<4> (lcd_cntrl_inst_count_Mcount_temp_cy<4>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<5> (lcd_cntrl_inst_count_Mcount_temp_cy<5>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<6> (lcd_cntrl_inst_count_Mcount_temp_cy<6>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<7> (lcd_cntrl_inst_count_Mcount_temp_cy<7>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<8> (lcd_cntrl_inst_count_Mcount_temp_cy<8>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<9> (lcd_cntrl_inst_count_Mcount_temp_cy<9>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<10> (lcd_cntrl_inst_count_Mcount_temp_cy<10>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<11> (lcd_cntrl_inst_count_Mcount_temp_cy<11>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<12> (lcd_cntrl_inst_count_Mcount_temp_cy<12>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<13> (lcd_cntrl_inst_count_Mcount_temp_cy<13>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<14> (lcd_cntrl_inst_count_Mcount_temp_cy<14>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<15> (lcd_cntrl_inst_count_Mcount_temp_cy<15>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<16> (lcd_cntrl_inst_count_Mcount_temp_cy<16>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<17> (lcd_cntrl_inst_count_Mcount_temp_cy<17>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<18> (lcd_cntrl_inst_count_Mcount_temp_cy<18>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<19> (lcd_cntrl_inst_count_Mcount_temp_cy<19>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<20> (lcd_cntrl_inst_count_Mcount_temp_cy<20>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<21> (lcd_cntrl_inst_count_Mcount_temp_cy<21>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<22> (lcd_cntrl_inst_count_Mcount_temp_cy<22>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<23> (lcd_cntrl_inst_count_Mcount_temp_cy<23>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<24> (lcd_cntrl_inst_count_Mcount_temp_cy<24>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<25> (lcd_cntrl_inst_count_Mcount_temp_cy<25>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<26> (lcd_cntrl_inst_count_Mcount_temp_cy<26>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<27> (lcd_cntrl_inst_count_Mcount_temp_cy<27>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<28> (lcd_cntrl_inst_count_Mcount_temp_cy<28>)
-     MUXCY:CI->O           1   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<29> (lcd_cntrl_inst_count_Mcount_temp_cy<29>)
-     MUXCY:CI->O           0   0.015   0.000  lcd_cntrl_inst_count_Mcount_temp_cy<30> (lcd_cntrl_inst_count_Mcount_temp_cy<30>)
-     XORCY:CI->O           1   0.393   0.000  lcd_cntrl_inst_count_Mcount_temp_xor<31> (lcd_cntrl_inst_count_Mcount_temp31)
-     FDR:D                     0.234          lcd_cntrl_inst_count_temp_31
+     FDRE:C->Q             2   0.591   0.590  lcd_cntrl_inst_state_FSM_FFd35 (lcd_cntrl_inst_state_FSM_FFd35)
+     LUT3_L:I0->LO         1   0.648   0.103  lcd_cntrl_inst_sf_d_temp<1>1_SW0 (N19)
+     LUT4:I3->O            3   0.648   0.563  lcd_cntrl_inst_sf_d_temp<1>1 (lcd_cntrl_inst_N13)
+     LUT3_L:I2->LO         1   0.648   0.103  lcd_cntrl_inst_clock_flag_mux0000111_SW0 (N21)
+     LUT4:I3->O            2   0.648   0.590  lcd_cntrl_inst_clock_flag_mux0000111 (lcd_cntrl_inst_N7)
+     LUT4_D:I0->O          1   0.648   0.500  lcd_cntrl_inst_clock_flag_mux00001127 (lcd_cntrl_inst_N4)
+     LUT3_D:I1->LO         1   0.643   0.180  lcd_cntrl_inst_count_temp_or000011 (N201)
+     LUT4:I1->O           32   0.643   1.262  lcd_cntrl_inst_count_temp_or0000 (lcd_cntrl_inst_count_temp_or0000)
+     FDR:R                     0.869          lcd_cntrl_inst_count_temp_0
     ----------------------------------------
-    Total                     12.867ns (4.449ns logic, 8.418ns route)
-                                       (34.6% logic, 65.4% route)
+    Total                      9.877ns (5.986ns logic, 3.891ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_divider_div_262144'
-  Clock period: 9.556ns (frequency: 104.651MHz)
-  Total number of paths / destination ports: 1844 / 73
+  Clock period: 8.157ns (frequency: 122.600MHz)
+  Total number of paths / destination ports: 1793 / 59
 -------------------------------------------------------------------------
-Delay:               9.556ns (Levels of Logic = 4)
-  Source:            timer_inst_tens_cnt_0 (FF)
-  Destination:       timer_inst_tens_cnt_3 (FF)
+Delay:               8.157ns (Levels of Logic = 6)
+  Source:            timer_state_sreg_FSM_FFd7 (FF)
+  Destination:       timer_inst_mins_cnt_2 (FF)
   Source Clock:      clk_divider_div_262144 rising
   Destination Clock: clk_divider_div_262144 rising
 
-  Data Path: timer_inst_tens_cnt_0 to timer_inst_tens_cnt_3
+  Data Path: timer_state_sreg_FSM_FFd7 to timer_inst_mins_cnt_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.732   1.657  timer_inst_tens_cnt_0 (timer_inst_tens_cnt_0)
-     LUT4:I0->O           10   0.454   1.369  timer_inst_tens_cnt[3]_GND_13_o_equal_7_o<3>1 (timer_inst_tens_cnt[3]_GND_13_o_equal_7_o)
-     LUT4:I2->O            1   0.454   1.121  timer_inst_enable1 (timer_inst_enable1)
-     LUT6:I3->O           11   0.454   1.229  timer_inst_enable3 (timer_inst_enable)
-     LUT6:I5->O            4   0.430   0.923  timer_inst__n0246_inv1 (timer_inst__n0246_inv)
-     FDCE:CE                   0.732          timer_inst_tens_cnt_0
+     FDC:C->Q              5   0.591   0.776  timer_state_sreg_FSM_FFd7 (timer_state_sreg_FSM_FFd7)
+     LUT2_D:I0->LO         1   0.648   0.103  timer_state_sreg_FSM_Out7_SW0 (N210)
+     LUT4:I3->O           49   0.648   1.300  timer_state_sreg_FSM_Out7 (mode_control)
+     LUT4:I2->O            5   0.648   0.665  timer_inst_mins_cnt_and00002 (timer_inst_mins_cnt_and0000)
+     LUT4:I2->O            2   0.648   0.479  timer_inst_mins_cnt_mux0002<17>11 (timer_inst_N4)
+     LUT3_L:I2->LO         1   0.648   0.103  timer_inst_mins_cnt_mux0002<17>40_SW0 (N132)
+     LUT4:I3->O            1   0.648   0.000  timer_inst_mins_cnt_mux0002<17>40 (timer_inst_mins_cnt_mux0002<17>)
+     FDCE:D                    0.252          timer_inst_mins_cnt_1
     ----------------------------------------
-    Total                      9.556ns (3.256ns logic, 6.300ns route)
-                                       (34.1% logic, 65.9% route)
+    Total                      8.157ns (4.731ns logic, 3.426ns route)
+                                       (58.0% logic, 42.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'timer_state_rst'
-  Clock period: 6.972ns (frequency: 143.437MHz)
-  Total number of paths / destination ports: 45 / 4
+  Clock period: 7.636ns (frequency: 130.959MHz)
+  Total number of paths / destination ports: 50 / 4
 -------------------------------------------------------------------------
-Delay:               6.972ns (Levels of Logic = 3)
-  Source:            timer_inst_hundredths_cnt_0 (LATCH)
-  Destination:       timer_inst_hundredths_cnt_2 (LATCH)
+Delay:               7.636ns (Levels of Logic = 5)
+  Source:            timer_inst_hundredths_cnt_2 (LATCH)
+  Destination:       timer_inst_hundredths_cnt_3 (LATCH)
   Source Clock:      timer_state_rst falling
   Destination Clock: timer_state_rst falling
 
-  Data Path: timer_inst_hundredths_cnt_0 to timer_inst_hundredths_cnt_2
+  Data Path: timer_inst_hundredths_cnt_2 to timer_inst_hundredths_cnt_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q              13   0.824   2.016  timer_inst_hundredths_cnt_0 (timer_inst_hundredths_cnt_0)
-     LUT5:I0->O            8   0.454   1.295  timer_inst_up_hundredths_cnt[3]_AND_56_o1 (timer_inst_up_hundredths_cnt[3]_AND_56_o)
-     LUT6:I4->O           11   0.454   1.229  timer_inst_enable3 (timer_inst_enable)
-     LUT6:I5->O            1   0.430   0.000  timer_inst_Mmux_GND_13_o_q[3]_mux_18_OUT<0>14 (timer_inst_GND_13_o_q[3]_mux_18_OUT<0>)
-     LD:D                      0.270          timer_inst_hundredths_cnt_0
+     LD:G->Q               9   0.728   0.963  timer_inst_hundredths_cnt_2 (timer_inst_hundredths_cnt_2)
+     LUT4:I0->O           24   0.648   1.255  timer_inst_tc_1_cmp_eq00001 (timer_inst_tc_1_cmp_eq0000)
+     LUT4:I3->O            6   0.648   0.672  timer_inst_hundredths_cnt_mux0005<3>110 (timer_inst_N14)
+     LUT4_L:I3->LO         1   0.648   0.103  timer_inst_hundredths_cnt_mux0005<3>32 (timer_inst_hundredths_cnt_mux0005<3>32)
+     LUT4:I3->O            1   0.648   0.423  timer_inst_hundredths_cnt_mux0005<3>56_SW0 (N180)
+     LUT4:I3->O            1   0.648   0.000  timer_inst_hundredths_cnt_mux0005<3>56 (timer_inst_hundredths_cnt_mux0005<3>)
+     LD:D                      0.252          timer_inst_hundredths_cnt_3
     ----------------------------------------
-    Total                      6.972ns (2.432ns logic, 4.540ns route)
-                                       (34.9% logic, 65.1% route)
+    Total                      7.636ns (4.220ns logic, 3.416ns route)
+                                       (55.3% logic, 44.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Offset:              2.611ns (Levels of Logic = 1)
-  Source:            strtstop (PAD)
-  Destination:       strtstop_debounce_Q1 (FF)
+Offset:              1.521ns (Levels of Logic = 1)
+  Source:            lap_load (PAD)
+  Destination:       lap_load_debounce_Q1 (FF)
   Destination Clock: clk rising 0.5X
 
-  Data Path: strtstop to strtstop_debounce_Q1
+  Data Path: lap_load to lap_load_debounce_Q1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.594   0.783  strtstop_IBUF (strtstop_IBUF)
-     FD:D                      0.234          strtstop_debounce_Q1
+     IBUF:I->O             1   0.849   0.420  lap_load_IBUF (lap_load_IBUF)
+     FD:D                      0.252          lap_load_debounce_Q1
     ----------------------------------------
-    Total                      2.611ns (1.828ns logic, 0.783ns route)
-                                       (70.0% logic, 30.0% route)
+    Total                      1.521ns (1.101ns logic, 0.420ns route)
+                                       (72.4% logic, 27.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_divider_div_262144'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Offset:              4.820ns (Levels of Logic = 2)
+Offset:              3.895ns (Levels of Logic = 2)
   Source:            reset (PAD)
-  Destination:       timer_state_sreg_FSM_FFd1 (FF)
+  Destination:       timer_state_sreg1_FSM_FFd2 (FF)
   Destination Clock: clk_divider_div_262144 rising
 
-  Data Path: reset to timer_state_sreg_FSM_FFd1
+  Data Path: reset to timer_state_sreg1_FSM_FFd2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.594   0.915  reset_IBUF (reset_IBUF)
-     LUT2:I1->O            9   0.430   1.121  timer_state_state_reset1 (timer_state_state_reset)
-     FDP:PRE                   0.760          timer_state_rst
+     IBUF:I->O             1   0.849   0.500  reset_IBUF (reset_IBUF)
+     LUT2:I1->O           16   0.643   1.034  timer_state_state_reset_and00001 (timer_state_state_reset)
+     FDR:R                     0.869          timer_state_sreg1_FSM_FFd1
     ----------------------------------------
-    Total                      4.820ns (2.784ns logic, 2.036ns route)
-                                       (57.8% logic, 42.2% route)
+    Total                      3.895ns (2.361ns logic, 1.534ns route)
+                                       (60.6% logic, 39.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 269 / 10
+  Total number of paths / destination ports: 272 / 10
 -------------------------------------------------------------------------
-Offset:              15.196ns (Levels of Logic = 6)
-  Source:            lcd_cntrl_inst_count_13 (FF)
+Offset:              14.285ns (Levels of Logic = 9)
+  Source:            lcd_cntrl_inst_state_FSM_FFd35 (FF)
   Destination:       lcd_e (PAD)
   Source Clock:      clk rising 0.5X
 
-  Data Path: lcd_cntrl_inst_count_13 to lcd_e
+  Data Path: lcd_cntrl_inst_state_FSM_FFd35 to lcd_e
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               8   0.732   1.901  lcd_cntrl_inst_count_13 (lcd_cntrl_inst_count_13)
-     LUT6:I0->O            1   0.454   1.212  lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>11 (lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>11)
-     LUT4:I0->O            2   0.454   1.651  lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>15 (lcd_cntrl_inst_GND_11_o_count[31]_equal_15_o<31>1)
-     LUT6:I0->O           16   0.454   2.112  lcd_cntrl_inst_GND_11_o_count[31]_equal_289_o<31> (lcd_cntrl_inst_GND_11_o_count[31]_equal_289_o)
-     LUT6:I1->O            1   0.454   0.994  lcd_cntrl_inst_Mmux_control11 (lcd_cntrl_inst_Mmux_control1)
-     LUT4:I2->O            1   0.454   0.783  lcd_cntrl_inst_Mmux_control13 (n0016<0>)
-     OBUF:I->O                 3.540          lcd_e_OBUF (lcd_e)
+     FDRE:C->Q             2   0.591   0.590  lcd_cntrl_inst_state_FSM_FFd35 (lcd_cntrl_inst_state_FSM_FFd35)
+     LUT3_L:I0->LO         1   0.648   0.103  lcd_cntrl_inst_sf_d_temp<1>1_SW0 (N19)
+     LUT4:I3->O            3   0.648   0.563  lcd_cntrl_inst_sf_d_temp<1>1 (lcd_cntrl_inst_N13)
+     LUT3_L:I2->LO         1   0.648   0.103  lcd_cntrl_inst_clock_flag_mux0000111_SW0 (N21)
+     LUT4:I3->O            2   0.648   0.590  lcd_cntrl_inst_clock_flag_mux0000111 (lcd_cntrl_inst_N7)
+     LUT4_D:I0->O          1   0.648   0.500  lcd_cntrl_inst_clock_flag_mux00001127 (lcd_cntrl_inst_N4)
+     LUT3_D:I1->O          1   0.643   0.563  lcd_cntrl_inst_count_temp_or000011 (lcd_cntrl_inst_N0)
+     LUT4:I0->O            1   0.648   0.563  lcd_cntrl_inst_control<0>12 (lcd_cntrl_inst_control<0>12)
+     LUT2:I0->O            1   0.648   0.420  lcd_cntrl_inst_control<0>26 (lcd_e_OBUF)
+     OBUF:I->O                 4.520          lcd_e_OBUF (lcd_e)
     ----------------------------------------
-    Total                     15.196ns (6.542ns logic, 8.654ns route)
-                                       (43.1% logic, 56.9% route)
-
-=========================================================================
-
-Cross Clock Domains Report:
---------------------------
-
-Clock to Setup on destination clock clk
-----------------------+---------+---------+---------+---------+
-                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------+---------+---------+---------+---------+
-clk                   |   12.867|         |         |         |
-clk_divider_div_262144|    8.742|         |         |         |
-timer_state_rst       |         |    8.692|         |         |
-----------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock clk_divider_div_262144
-----------------------+---------+---------+---------+---------+
-                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------+---------+---------+---------+---------+
-clk                   |    6.633|         |         |         |
-clk_divider_div_262144|    9.556|         |         |         |
-timer_state_rst       |         |    8.357|         |         |
-----------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock timer_state_rst
-----------------------+---------+---------+---------+---------+
-                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-----------------------+---------+---------+---------+---------+
-clk_divider_div_262144|         |         |    8.170|         |
-timer_state_rst       |         |         |    6.972|         |
-----------------------+---------+---------+---------+---------+
+    Total                     14.285ns (10.290ns logic, 3.995ns route)
+                                       (72.0% logic, 28.0% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.42 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.67 secs
  
 --> 
 
-Total memory usage is 258600 kilobytes
+Total memory usage is 342696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   26 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 

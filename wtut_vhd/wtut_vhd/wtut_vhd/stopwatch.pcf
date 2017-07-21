@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Jul 21 15:02:28 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "mode" LOCATE = SITE "T14" LEVEL 1;
+COMP "lcd_e" LOCATE = SITE "AB4" LEVEL 1;
+COMP "sf_d<0>" LOCATE = SITE "Y13" LEVEL 1;
+COMP "sf_d<1>" LOCATE = SITE "AB18" LEVEL 1;
+COMP "sf_d<2>" LOCATE = SITE "AB17" LEVEL 1;
+COMP "sf_d<3>" LOCATE = SITE "AB12" LEVEL 1;
+COMP "sf_d<4>" LOCATE = SITE "AA12" LEVEL 1;
+COMP "sf_d<5>" LOCATE = SITE "Y16" LEVEL 1;
+COMP "sf_d<6>" LOCATE = SITE "AB16" LEVEL 1;
+COMP "sf_d<7>" LOCATE = SITE "Y15" LEVEL 1;
+COMP "reset" LOCATE = SITE "U15" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "Y14" LEVEL 1;
+COMP "lcd_rw" LOCATE = SITE "W13" LEVEL 1;
+COMP "strtstop" LOCATE = SITE "T15" LEVEL 1;
+SCHEMATIC END;
+

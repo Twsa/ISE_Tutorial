@@ -22,122 +22,173 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="wtut_vhd.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="clk_div_262k.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="clk_div_262k.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="clk_div_262k.xst"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="compxlib.log"/>
-    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="dcm1.vhd">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="BehavioralSim"/>
-    </file>
-    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="dcm1.vhi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="dcm1.vhd"/>
     <file xil_pn:fileType="FILE_UCF" xil_pn:name="dcm1_arwz.ucf" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="debounce.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="debounce.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="debounce.xst"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ipcore_dir/dcm1.vhd" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
-    <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/stopwatch_synthesis.nlf"/>
-    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/stopwatch_synthesis.vhd"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="stopwatch.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="stopwatch.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="stopwatch.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="stopwatch.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="stopwatch.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="stopwatch.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="stopwatch.ncd" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="stopwatch.ngc"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="stopwatch.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="stopwatch.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="stopwatch.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="stopwatch.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="stopwatch.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="stopwatch.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="stopwatch.ptwx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="stopwatch.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="stopwatch.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="stopwatch.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="stopwatch.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="stopwatch.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="stopwatch.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="stopwatch.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="stopwatch.xst"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="stopwatch_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="stopwatch_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="stopwatch_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="stopwatch_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="stopwatch_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="stopwatch_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="stopwatch_map.xrpt"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="stopwatch_ngdbuild.xrpt"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="stopwatch_summary.html"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="stopwatch_tb.fdo"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="stopwatch_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="stopwatch_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="stopwatch_par.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="stopwatch_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="stopwatch_usage.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="stopwatch_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="stopwatch_xst.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="time_cnt.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="time_cnt.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="time_cnt.xst"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="xaw2vhdl.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1500514324" xil_pn:name="TRANEXT_compLibraries_FPGA" xil_pn:prop_ck="-8924536867506857886" xil_pn:start_ts="1500513962">
-      <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="compxlib.log"/>
-    </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1500514499">
+    <transform xil_pn:end_ts="1500620492" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-6273491924156678267" xil_pn:start_ts="1500620492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:in_ck="-2867736975867235807" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1500514499">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../clk_div_262k.vhd"/>
-      <outfile xil_pn:name="../lcd_control.vhd"/>
-      <outfile xil_pn:name="../statmach.vhd"/>
-      <outfile xil_pn:name="../stopwatch.vhd"/>
-      <outfile xil_pn:name="../stopwatch_tb.vhd"/>
-      <outfile xil_pn:name="../time_cnt.vhd"/>
-      <outfile xil_pn:name="debounce.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:in_ck="2640052635460169586" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="720181032706684501" xil_pn:start_ts="1500514499">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="dcm1.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1747115080954210115" xil_pn:start_ts="1500514499">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:in_ck="-5227364927412947686" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2525188860092374474" xil_pn:start_ts="1500514499">
+    <transform xil_pn:end_ts="1500620492" xil_pn:in_ck="-5227364927412947686" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2525188860092374474" xil_pn:start_ts="1500620492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/timer_preset.ngc"/>
       <outfile xil_pn:name="ipcore_dir/timer_preset.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1500514499" xil_pn:in_ck="2994883615242774024" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1500514499">
+    <transform xil_pn:end_ts="1500620493" xil_pn:in_ck="-6482345941241302327" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1500620492">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="../clk_div_262k.vhd"/>
-      <outfile xil_pn:name="../lcd_control.vhd"/>
-      <outfile xil_pn:name="../statmach.vhd"/>
-      <outfile xil_pn:name="../stopwatch.vhd"/>
-      <outfile xil_pn:name="../stopwatch_tb.vhd"/>
-      <outfile xil_pn:name="../time_cnt.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620498" xil_pn:in_ck="2640052635460169586" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8518987191606169251" xil_pn:start_ts="1500620493">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="dcm1.vhd"/>
-      <outfile xil_pn:name="debounce.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/timer_preset.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1500519003" xil_pn:in_ck="2994883615242774024" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="915551920585414364" xil_pn:start_ts="1500519000">
+    <transform xil_pn:end_ts="1500620498" xil_pn:in_ck="-6482345941241302327" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="4579864356909105523" xil_pn:start_ts="1500620498">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="stopwatch_tb.fdo"/>
-      <outfile xil_pn:name="vsim.wlf"/>
-      <outfile xil_pn:name="work"/>
     </transform>
-    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+    <transform xil_pn:end_ts="1500620498" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4880539899782026604" xil_pn:start_ts="1500620498">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620527" xil_pn:in_ck="-8814266435774834245" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4052149546077732924" xil_pn:start_ts="1500620502">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.lso"/>
+      <outfile xil_pn:name="stopwatch.ngc"/>
+      <outfile xil_pn:name="stopwatch.ngr"/>
+      <outfile xil_pn:name="stopwatch.prj"/>
+      <outfile xil_pn:name="stopwatch.stx"/>
+      <outfile xil_pn:name="stopwatch.syr"/>
+      <outfile xil_pn:name="stopwatch.xst"/>
+      <outfile xil_pn:name="stopwatch_vhdl.prj"/>
+      <outfile xil_pn:name="stopwatch_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620527" xil_pn:in_ck="-5068631231577766487" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-4936718402550963470" xil_pn:start_ts="1500620527">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620538" xil_pn:in_ck="-3831042139086832652" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-324736304586114911" xil_pn:start_ts="1500620527">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.bld"/>
+      <outfile xil_pn:name="stopwatch.ngd"/>
+      <outfile xil_pn:name="stopwatch_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620552" xil_pn:in_ck="-347283760641871731" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5706167834589782188" xil_pn:start_ts="1500620538">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.pcf"/>
+      <outfile xil_pn:name="stopwatch_map.map"/>
+      <outfile xil_pn:name="stopwatch_map.mrp"/>
+      <outfile xil_pn:name="stopwatch_map.ncd"/>
+      <outfile xil_pn:name="stopwatch_map.ngm"/>
+      <outfile xil_pn:name="stopwatch_map.xrpt"/>
+      <outfile xil_pn:name="stopwatch_summary.xml"/>
+      <outfile xil_pn:name="stopwatch_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620577" xil_pn:in_ck="-700689118583065018" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="6973808786348774276" xil_pn:start_ts="1500620552">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.ncd"/>
+      <outfile xil_pn:name="stopwatch.pad"/>
+      <outfile xil_pn:name="stopwatch.par"/>
+      <outfile xil_pn:name="stopwatch.ptwx"/>
+      <outfile xil_pn:name="stopwatch.unroutes"/>
+      <outfile xil_pn:name="stopwatch.xpi"/>
+      <outfile xil_pn:name="stopwatch_pad.csv"/>
+      <outfile xil_pn:name="stopwatch_pad.txt"/>
+      <outfile xil_pn:name="stopwatch_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1500621408" xil_pn:in_ck="-5068631231577774112" xil_pn:name="TRANEXT_bitFile_spartan3a" xil_pn:prop_ck="-7034545718515437766" xil_pn:start_ts="1500621399">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.bgn"/>
+      <outfile xil_pn:name="stopwatch.bit"/>
+      <outfile xil_pn:name="stopwatch.drc"/>
+      <outfile xil_pn:name="stopwatch.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620684" xil_pn:in_ck="2343154145718974857" xil_pn:name="TRAN_fpgaFloorplanPostPAR" xil_pn:start_ts="1500620577">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1500620577" xil_pn:in_ck="2343154145718974857" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1500620573">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="stopwatch.twr"/>
+      <outfile xil_pn:name="stopwatch.twx"/>
     </transform>
   </transforms>
 

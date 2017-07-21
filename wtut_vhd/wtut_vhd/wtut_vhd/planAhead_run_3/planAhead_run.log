@@ -1,0 +1,35 @@
+
+****** PlanAhead v14.7
+  **** Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/pa.fromNcd.tcl
+# create_project -name wtut_vhd -dir "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/planAhead_run_5" -part xc3s700afg484-4
+create_project: Time (s): elapsed = 00:00:05 . Memory (MB): peak = 414.727 ; gain = 25.176
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ngc" [ get_property srcset [ current_run ] ]
+WARNING: [Designutils 20-342] File / dir doesn't exist, skipping: D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ngc
+# add_files -norecurse { {D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd} {ipcore_dir} }
+# add_files [list {ipcore_dir/timer_preset.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "stopwatch.ucf" [current_fileset -constrset]
+Adding file 'D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ucf' to fileset 'constrs_1'
+# add_files [list {stopwatch.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s700afg484-4
+
+    while executing
+"link_design"
+    (file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/pa.fromNcd.tcl" line 12)
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Fri Jul 21 15:01:25 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead
