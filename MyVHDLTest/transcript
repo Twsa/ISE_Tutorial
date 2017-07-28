@@ -13,41 +13,38 @@
 # //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
-# do {ink_jet_decoder_tb.fdo}
+# do {alarm_no_priority_tb.fdo}
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 15:31:45 on Jul 28,2017
-# vcom -reportprogress 300 -explicit -93 ink_jet_decoder.vhd 
+# Start time: 15:40:12 on Jul 28,2017
+# vcom -reportprogress 300 -explicit -93 alarm_no_priority.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity ink_jet_ecoder
-# -- Compiling architecture eqn of ink_jet_ecoder
-# End time: 15:31:46 on Jul 28,2017, Elapsed time: 0:00:01
+# -- Compiling entity alarm_no_priority
+# -- Compiling architecture eqn of alarm_no_priority
+# End time: 15:40:12 on Jul 28,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vcom 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 15:31:46 on Jul 28,2017
-# vcom -reportprogress 300 -explicit -93 ink_jet_decoder_tb.vhd 
+# Start time: 15:40:12 on Jul 28,2017
+# vcom -reportprogress 300 -explicit -93 alarm_no_priority_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity ink_jet_decoder_tb
-# -- Compiling architecture behavior of ink_jet_decoder_tb
-# End time: 15:31:46 on Jul 28,2017, Elapsed time: 0:00:00
+# -- Compiling entity alarm_no_priority_tb
+# -- Compiling architecture behavior of alarm_no_priority_tb
+# End time: 15:40:12 on Jul 28,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -gui -do "do {ink_jet_decoder_tb.fdo}" 
-# Start time: 15:31:46 on Jul 28,2017
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# vsim -gui -do "do {alarm_no_priority_tb.fdo}" 
+# Start time: 15:40:12 on Jul 28,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.ink_jet_decoder_tb(behavior)#1
-# Loading work.ink_jet_ecoder(eqn)#1
+# Loading work.alarm_no_priority_tb(behavior)#1
+# Loading work.alarm_no_priority(eqn)#1
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-do D:/GitHub/ISE_Tutorial/MyVHDLTest/wave/ink_jet_decoder_wave.do
-# End time: 15:33:58 on Jul 28,2017, Elapsed time: 0:02:12
-# Errors: 0, Warnings: 0

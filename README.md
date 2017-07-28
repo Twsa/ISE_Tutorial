@@ -13,8 +13,7 @@
 *   0      0       0        yellow
 *   1      0       1        light_cyan
 *   1      1       1        light_megenta
-** VHDL仿真平台：ink_jet_decoder_tb.vhd  **
+### VHDL仿真平台：ink_jet_decoder_tb.vhd
 添加输入时钟引脚，使得仿真能够进行。
 ### 仿真效果图
-![仿真效果图](https://github.com/Twsa/ISE_Tutorial/tree/master/MyVHDLTest/graphic/ink_jet_graphic.png)
-
+![仿真效果图https://github.com/Twsa/ISE_Tutorial/blob/master/MyVHDLTest/graphic/ink_jet_graphic.png)
