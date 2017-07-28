@@ -1,0 +1,8 @@
+V3 3
+FL D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_decoder.vhd 2017/07/28.10:01:21 P.20131013
+EN work/ink_jet_ecoder 1501207398 \
+      FL D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_decoder.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ink_jet_ecoder/eqn 1501207399 \
+      FL D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_decoder.vhd \
+      EN work/ink_jet_ecoder 1501207398

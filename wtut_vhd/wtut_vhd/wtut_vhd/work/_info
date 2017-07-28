@@ -1,0 +1,111 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd
+T_opt
+!s110 1500629839
+VJ7QiGE3XMF]5R<QQQd_H50
+04 12 14 work stopwatch_tb testbench_arch 1
+=1-206a50591220-5971cb4c-44-27a0
+o-quiet -auto_acc_if_foreign -work work -sdfmax /UUT=netgen/par/stopwatch_timesim.sdf -suppress 1948 +acc
+n@_opt
+OL;O;10.4;61
+R0
+Estopwatch
+Z1 w1500629814
+Z2 DPx9 vital2000 16 vital_primitives 0 22 `a]zGa`>UD04SCd]1aJR_3
+Z3 DPx7 simprim 8 vpackage 0 22 NF<8k1:2W<L]]nAQ6<QlU0
+Z4 DPx9 vital2000 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx7 simprim 11 vcomponents 0 22 h56C[zPFX`a3dzWE;:D2<1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8netgen/par/stopwatch_timesim.vhd
+Z9 Fnetgen/par/stopwatch_timesim.vhd
+l0
+L41
+VAAK3h32zh=DH;35;W_>b50
+!s100 QfmaOZgUKQU>82b_n67Pj0
+Z10 OL;C;10.4;61
+31
+!s110 1500702451
+!i10b 1
+Z11 !s108 1500702451.432000
+Z12 !s90 -reportprogress|300|-explicit|-93|netgen/par/stopwatch_timesim.vhd|
+Z13 !s107 netgen/par/stopwatch_timesim.vhd|
+!i113 0
+Z14 o-explicit -93
+Z15 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 stopwatch 0 22 AAK3h32zh=DH;35;W_>b50
+l2076
+L55
+VFDT[I^hHD;[G3_=W@cTN_3
+!s100 eLfBW2>mkA9F[?b^RZ4=P0
+R10
+31
+Z16 !s110 1500702452
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Estopwatch_tb
+Z17 w1179301014
+Z18 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z19 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z20 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R6
+R7
+R0
+Z21 8../stopwatch_tb.vhd
+Z22 F../stopwatch_tb.vhd
+l0
+L27
+Ve;I2JW8HI[z[njE8<dBaU0
+!s100 RRX@@z9i>ci=Zod1YDo9R2
+R10
+31
+R16
+!i10b 1
+Z23 !s108 1500702452.429000
+Z24 !s90 -reportprogress|300|-explicit|-93|../stopwatch_tb.vhd|
+Z25 !s107 ../stopwatch_tb.vhd|
+!i113 0
+R14
+R15
+Atestbench_arch
+R18
+R19
+R20
+R6
+R7
+Z26 DEx4 work 12 stopwatch_tb 0 22 e;I2JW8HI[z[njE8<dBaU0
+l58
+L30
+Z27 VF8JmPUX:mZkk77OK>jhjB0
+Z28 !s100 6Ub2njJ9PABRB0jlJBjdi1
+R10
+31
+R16
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R14
+R15

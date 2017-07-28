@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.57 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.57 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: stopwatch.prj
 
@@ -108,42 +108,34 @@ Cores Search Directories           : {"ipcore_dir"  }
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/timer_preset.vhd" in Library work.
-Entity <timer_preset> compiled.
-Entity <timer_preset> (Architecture <timer_preset_a>) compiled.
+Architecture timer_preset_a of Entity timer_preset is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/dcm1.vhd" in Library work.
-Entity <dcm1> compiled.
-Entity <dcm1> (Architecture <BEHAVIORAL>) compiled.
+Architecture behavioral of Entity dcm1 is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/clk_div_262k.vhd" in Library work.
-Entity <clk_div_262k> compiled.
-Entity <clk_div_262k> (Architecture <divide>) compiled.
+Architecture divide of Entity clk_div_262k is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/lcd_control.vhd" in Library work.
-Entity <lcd_control> compiled.
-Entity <lcd_control> (Architecture <lcd_control_arch>) compiled.
+Architecture lcd_control_arch of Entity lcd_control is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/debounce.vhd" in Library work.
-Entity <debounce> compiled.
-Entity <debounce> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity debounce is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/time_cnt.vhd" in Library work.
-Entity <time_cnt> compiled.
-Entity <time_cnt> (Architecture <time_cnt_arch>) compiled.
+Architecture time_cnt_arch of Entity time_cnt is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/statmach.vhd" in Library work.
-Entity <statmach> compiled.
-Entity <statmach> (Architecture <behavior>) compiled.
+Architecture behavior of Entity statmach is up to date.
 Compiling vhdl file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" in Library work.
-Entity <stopwatch> compiled.
-Entity <stopwatch> (Architecture <stopwatch_arch>) compiled.
+Architecture stopwatch_arch of Entity stopwatch is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <stopwatch> in library <work> (architecture <stopwatch_arch>).
 
-Analyzing hierarchy for entity <dcm1> in library <work> (architecture <BEHAVIORAL>).
+Analyzing hierarchy for entity <dcm1> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <clk_div_262k> in library <work> (architecture <divide>).
 
 Analyzing hierarchy for entity <lcd_control> in library <work> (architecture <lcd_control_arch>).
 
-Analyzing hierarchy for entity <debounce> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <debounce> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <time_cnt> in library <work> (architecture <time_cnt_arch>).
 
@@ -162,7 +154,7 @@ WARNING:Xst:753 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" line 
 WARNING:Xst:753 - "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/stopwatch.vhd" line 165: Unconnected output port 'CLK0_OUT' of component 'dcm1'.
 Entity <stopwatch> analyzed. Unit <stopwatch> generated.
 
-Analyzing Entity <dcm1> in library <work> (Architecture <BEHAVIORAL>).
+Analyzing Entity <dcm1> in library <work> (Architecture <behavioral>).
     Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
     Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
     Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <dcm1>.
@@ -190,7 +182,7 @@ Entity <clk_div_262k> analyzed. Unit <clk_div_262k> generated.
 Analyzing Entity <lcd_control> in library <work> (Architecture <lcd_control_arch>).
 Entity <lcd_control> analyzed. Unit <lcd_control> generated.
 
-Analyzing Entity <debounce> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <debounce> in library <work> (Architecture <behavioral>).
 Entity <debounce> analyzed. Unit <debounce> generated.
 
 Analyzing Entity <time_cnt> in library <work> (Architecture <time_cnt_arch>).
@@ -783,12 +775,12 @@ Offset:              14.285ns (Levels of Logic = 9)
 =========================================================================
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 17.67 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.02 secs
  
 --> 
 
-Total memory usage is 342696 kilobytes
+Total memory usage is 342704 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    7 (   0 filtered)

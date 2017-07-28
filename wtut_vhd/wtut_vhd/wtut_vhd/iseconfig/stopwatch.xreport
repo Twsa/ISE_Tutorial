@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-07-21T14:35:58</DateModified>
+  <DateModified>2017-07-22T13:34:56</DateModified>
   <ModuleName>stopwatch</ModuleName>
-  <SummaryTimeStamp>2017-07-21T13:54:57</SummaryTimeStamp>
+  <SummaryTimeStamp>2017-07-21T17:02:13</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/iseconfig/stopwatch.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd\</ImplementationReportsDirectory>
   <DateInitialized>2017-05-22T14:50:31</DateInitialized>

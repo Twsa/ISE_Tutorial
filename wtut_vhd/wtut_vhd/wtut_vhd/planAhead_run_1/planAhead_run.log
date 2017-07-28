@@ -40,7 +40,7 @@ WARNING:NetListWriters:306 - Signal bus lcd_cntrl_inst_sf_d_temp<3 : 1> on block
    stopwatch is not reconstructed, because there are some missing bus signals.
   finished :Prep
 Writing EDIF netlist file stopwatch.edif ...
-ngc2edif: Total memory usage is 84872 kilobytes
+ngc2edif: Total memory usage is 84552 kilobytes
 
 Parsing EDIF File [./planAhead_run_1/wtut_vhd.data/cache/stopwatch_ngc_zx.edif]
 Finished Parsing EDIF File [./planAhead_run_1/wtut_vhd.data/cache/stopwatch_ngc_zx.edif]
@@ -56,7 +56,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file timer_preset.edif ...
-ngc2edif: Total memory usage is 85064 kilobytes
+ngc2edif: Total memory usage is 84552 kilobytes
 
 Reading core file 'D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/ipcore_dir/timer_preset.ngc' for (cell view 'timer_preset', library 'stopwatch_lib', file 'stopwatch.ngc')
 Parsing EDIF File [./planAhead_run_1/wtut_vhd.data/cache/timer_preset_ngc_zx.edif]
@@ -80,7 +80,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Phase 0 | Netlist Checksum: 29bc8136
-link_design: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 572.703 ; gain = 97.105
+link_design: Time (s): elapsed = 00:00:11 . Memory (MB): peak = 570.379 ; gain = 104.516
 # read_xdl -file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ncd"
 Release 14.7 - xdl P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
@@ -92,11 +92,11 @@ Successfully converted design 'D:\GitHub\ISE_Tutorial\wtut_vhd\wtut_vhd\wtut_vhd
 INFO: [Designutils 20-669] Parsing Placement File : D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ncd
 INFO: [Designutils 20-658] Finished Parsing Placement File : D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.ncd
 INFO: [Designutils 20-671] Placed 804 instances
-read_xdl: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 580.449 ; gain = 7.746
+read_xdl: Time (s): elapsed = 00:00:07 . Memory (MB): peak = 580.887 ; gain = 10.508
 # if {[catch {read_twx -name results_1 -file "D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.twx"} eInfo]} {
 #    puts "WARNING: there was a problem importing \"D:/GitHub/ISE_Tutorial/wtut_vhd/wtut_vhd/wtut_vhd/stopwatch.twx\": $eInfo"
 # }
 exit
 ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
-INFO: [Common 17-206] Exiting PlanAhead at Fri Jul 21 15:15:06 2017...
+INFO: [Common 17-206] Exiting PlanAhead at Fri Jul 21 17:04:34 2017...
 INFO: [Common 17-83] Releasing license: PlanAhead

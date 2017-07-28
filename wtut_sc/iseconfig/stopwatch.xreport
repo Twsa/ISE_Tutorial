@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-07-19T08:48:12</DateModified>
+  <DateModified>2017-07-21T16:07:20</DateModified>
   <ModuleName>stopwatch</ModuleName>
   <SummaryTimeStamp>2017-07-17T15:16:18</SummaryTimeStamp>
-  <SavedFilePath>C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc/iseconfig/stopwatch.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Xilinx/14.7/ISE_DS/ISE/ISEexamples/wtut_sc\</ImplementationReportsDirectory>
+  <SavedFilePath>D:/GitHub/ISE_Tutorial/wtut_sc/iseconfig/stopwatch.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/GitHub/ISE_Tutorial/wtut_sc\</ImplementationReportsDirectory>
   <DateInitialized>2017-07-17T15:12:15</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

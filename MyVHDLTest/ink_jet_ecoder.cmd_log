@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700a-fg484-4 ink_jet_ecoder.ngc ink_jet_ecoder.ngd  
+map -intstyle ise -p xc3s700a-fg484-4 -cm area -ir off -pr off -c 100 -o ink_jet_ecoder_map.ncd ink_jet_ecoder.ngd ink_jet_ecoder.pcf 
+par -w -intstyle ise -ol high -t 1 ink_jet_ecoder_map.ncd ink_jet_ecoder.ncd ink_jet_ecoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ink_jet_ecoder.twx ink_jet_ecoder.ncd -o ink_jet_ecoder.twr ink_jet_ecoder.pcf 
+xst -intstyle ise -ifn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.xst" -ofn "D:/GitHub/ISE_Tutorial/MyVHDLTest/ink_jet_ecoder.syr" 
