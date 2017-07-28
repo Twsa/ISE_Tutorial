@@ -26,11 +26,12 @@
 * 5区：100  6区：101  7区：110  8区: 111   
 * Note 左边为最高位，同一时刻输入信号只有一个1
 ### alarm_no_priority_tb.vhd
+`
+       -- insert simulation
+	   --2区 set
+       wait for clk_period*2;
+		 zone <= "01000000";
 
-I strongly recommend against using any `<blink>` tags.
-
-I wish SmartyPants used named entities like `&mdash;`
-instead of decimal-encoded entites like `&#8212;`.
-
+`
 ### 仿真效果图
 ![仿真效果图](https://github.com/Twsa/ISE_Tutorial/blob/master/MyVHDLTest/graphic/alarm_no_priority.png);
